@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DTE</title>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/map.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!--HEADER-->
+    <header>
+        <nav class="d-flex flex-wrap justify-content-between align-items-center">
+            <img src="/img/logo.svg" alt="DTE" class="logo">
+            <ul>
+                <li><a href="#">Направления</a></li>
+                <li><a href="#">Тезисы</a></li>
+                <li><a href="#">Оргкомитет</a></li>
+                <li><a href="#" class="special">Регистрация</a></li>
+                <li><a href="#">DTE 2018</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Цифровая трансформация образования</h1>
+                    <h2>II Международная научно-практическая конференция</h2>
+                </div>
+                <div class="col-12">
+                    <div class="c-t d-flex justify-content-between">
+                        <div class="d-w">
+                            <p id="days"></p>
+                            <span>Дней</span>
+                        </div>
+                        <div class="h-w">
+                            <p id="hours"></p>
+                            <span>Часов</span>
+                        </div>
+                        <div class="m-w">
+                            <p id="minutes"></p>
+                            <span>Минут</span>
+                        </div>
+                        <div class="s-w">
+                            <p id="seconds"></p>
+                            <span>Секунд</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--HEADER-->
+
+    <!--DIRECTION-->
+    <div class="wrap">
+        <div class="container">
+            <h3 class="section-title">Направления</h3>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 d-w">
+                    <div class="d-w_d">
+                        <img src="img/cloud-computing.svg" alt="" class="d_d-i">
+                        <p class="d_d-t d-flex align-items-center">Технологические тренды в образовании: дополненная реальность, искусственный интеллект, большие данные, облачные технологии, блокчейн.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 d-w">
+                    <div class="d-w_d">
+                        <img src="img/learning_1.svg" alt="" class="d_d-i">
+                        <p class="d_d-t d-flex align-items-center">Трансформация управления системой образования в цифровую эпоху.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 d-w">
+                    <div class="d-w_d">
+                        <img src="img/university.svg" alt="" class="d_d-i">    
+                        <p class="d_d-t d-flex align-items-center">Перспективы IT-образования в Беларуси. Корпоративные университеты и бизнес-школы.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 d-w">
+                    <div class="d-w_d">
+                        <img src="img/training.svg" alt="" class="d_d-i">
+                        <p class="d_d-t d-flex align-items-center">EdTech-проекты: платформы онлайн-обучения и образовательные приложения.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 d-w">
+                    <div class="d-w_d">
+                        <img src="img/earth-globe.svg" alt="" class="d_d-i">
+                        <p class="d_d-t d-flex align-items-center">Белорусский и зарубежный опыт внедрения инноваций в образовательный процесс.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 d-w">
+                    <div class="d-w_d">
+                        <img src="img/learning.svg" alt="" class="d_d-i">
+                        <p class="d_d-t d-flex align-items-center">Использование информационно-коммуникационных технологий для расширения экспорта образовательных услуг и формирования университета 3.0.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 d-w">
+                    <div class="d-w_d">
+                        <img src="img/chip.svg" alt="" class="d_d-i">
+                        <p class="d_d-t d-flex align-items-center">Цифровые компетенции и профессии будущего. Адаптация образовательных программ к цифровой экономике.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--DIRECTION-->
+
+    <!--Theses-->
+    <div class="wrap">
+            <div class="container">
+                <h3 class="section-title">Правила подачи тезисов</h3>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Для участия необходимо до <b>18 марта 2019 года</b> заполнить <a href="#">заявку</a> на сайте конференции. Лучшие доклады будут опубликованы в журнале «Цифровая трансформация».</p>
+                        <p>Название файла должно содержать номер секции, фамилию и инициалы первого автора (например: 4_ИвановПС.docx).</p>
+                        <p>Объем представляемых тезисов: от 2 до 5 страниц формата А4. Используйте, пожалуйста, <a href="#">следующий шаблон</a> для оформления тезисов.</p>
+                        <p>Решение программного комитета о принятии доклада к публикации будет сообщено на Вашу электронную почту по мере обработки заявок.</p>
+                        <p>Прием тезисов и заявок на участие в конференции – <b>до 18.03.2019</b>.</p>
+                        <p>Проведение форума конференции – <b>27.03.2019</b>.</p> 
+                        <p>Издание электронного сборника материалов конференции – <b>апрель 2019 года</b>.</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!--Theses-->
+
+    <!--Map-->
+    <div class="wrap map">
+            <div class="container">
+                <h3 class="section-title">Место проведения</h3>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div id="map"></div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <ul class="m-i-w">
+                            <li class="d-flex align-items-center">
+                                <img src="img/calendar.svg" alt="">
+                                27 Марта 2019
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <img src="img/placeholder-on-map-paper-in-perspective.svg" alt="">
+                                Place
+                            </li>
+                            <li class="d-flex align-items-center"> 
+                                <img src="img/clock-circular-outline.svg" alt="">
+                                Time
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!--Map-->
+
+    <!--FOOTER-->
+    <footer class="wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 f-i">
+                    <h3 class="section-title">Контактная информация</h3>
+                    <ul>
+                        <li class="d-flex align-items-center">
+                            <img src="img/message-closed-envelope.svg">
+                            <a href="mailto:conference@unibel.by">conference@unibel.by</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img src="img/telephone.svg">
+                            <a href="tel:tel:+375172100249">8 (017) 210-02-49</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 f-i">
+                    <h3 class="section-title">Поделиться</h3>       
+                        <ul class="social">
+                            <li>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdtconf.unibel.by%2F&src=sdkpreparse" target="_blank">
+                                    <img src="img/facebook-logo.svg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://vk.com/share.php?url=http://dtconf.unibel.by" target="_blank">
+                                    <img src="img/vk-social-logotype.svg">
+                                </a>
+                            </li>
+                        </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 f-i">
+                        <h3 class="section-title">Навигация</h3>
+                        <ul class="adv-nav">
+                            <li><a href="#">Направления</a></li>
+                            <li><a href="#">Тезисы</a></li>
+                            <li><a href="#">Оргкомитет</a></li>
+                            <li><a href="#" class="special">Регистрация</a></li>
+                            <li><a href="#">DTE 2018</a></li>
+                        </ul>
+                </div>
+                <div class="col-12">
+                    <p class="copyright">&copy; 2019 Учреждение «Главный информационно-аналитический центр Министерства образования Республики Беларусь»</p>
+                    <p><small>Разработка сайта  -  <a href="mailto:voinichsg@gmail.com">Войнич Сергей</a></small></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--FOOTER-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        function updater(d, h, m, s) {
+            var baseTime = new Date('March 27, 2019');
+
+            function update() {
+                var cur = new Date();
+                // сколько осталось миллисекунд
+                var diff = (baseTime - cur);
+                // сколько миллисекунд до конца секунды
+                var millis = diff % 1000;
+                diff = Math.floor(diff/1000);
+                // сколько секунд до конца минуты
+                var sec = diff % 60;
+                if(sec < 10) sec = "0"+sec;
+                diff = Math.floor(diff/60);
+                // сколько минут до конца часа
+                var min = diff % 60;
+                if(min < 10) min = "0"+min;
+                diff = Math.floor(diff/60);
+                // сколько часов до конца дня
+                var hours = diff % 24;
+                if(hours < 10) hours = "0"+hours;
+                var days = Math.floor(diff / 24);
+                d.innerHTML = days;
+                h.innerHTML = hours;
+                m.innerHTML = min;
+                s.innerHTML = sec;
+                // следующий раз вызываем себя, когда закончится текущая секунда
+                setTimeout(update, millis);
+            }
+            setTimeout(update, 0);
+        }
+        updater(document.getElementById("days"), document.getElementById("hours"), document.getElementById("minutes"),document.getElementById("seconds"));
+    </script>
+</body>
+</html>
