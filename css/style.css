@@ -91,6 +91,9 @@ nav > ul > li > a:hover{
 a.special {
     background-color: #005c82;
 }
+a.active{
+    box-shadow: 0 0 0 2px #fff;
+}
 header .container{
     position: relative;
     z-index: 2;
@@ -159,36 +162,37 @@ header h2 {
     transition: 350ms;
 }
 .map{
-    /* background-color: #005c82; */
-    background-image: url('../img/82.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    color: #fff;
+    position: relative;
+    height: 480px;
 }
-.m-i-w{
+div#map {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+/* .m-i-w{
     list-style: none;
     margin: 0;
     padding: 0;
 }
 .m-i-w li {
-    padding: 10px;
     margin-bottom: 15px;
-    text-transform: uppercase;
-    font-size: 1.2rem;
 }
 .m-i-w li:last-child{
     margin-bottom: 0;
 }
 .m-i-w li img {
-    width: 45px;
+    width: 24px;
     height: auto;
     margin-right: 15px;
-}
+} */
 footer{
     background-color: #000;
     color: #fff;
+}
+footer.wrap{
+    padding-bottom: 0;
 }
 footer .f-i{
     margin-bottom: 45px;

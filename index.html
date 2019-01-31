@@ -14,14 +14,14 @@
 
     <!--HEADER-->
     <header>
-        <nav class="d-flex flex-wrap justify-content-between align-items-center">
+        <nav class="d-flex flex-wrap justify-content-between align-items-center" id="nav">
             <img src="/img/logo.svg" alt="DTE" class="logo">
             <ul>
-                <li><a href="#">Направления</a></li>
-                <li><a href="#">Тезисы</a></li>
-                <li><a href="#">Оргкомитет</a></li>
-                <li><a href="#" class="special">Регистрация</a></li>
-                <li><a href="#">DTE 2018</a></li>
+                <li><a href="#direction" class="scroll">Направления</a></li>
+                <li><a href="#committee" class="scroll">Оргкомитет</a></li>
+                <li><a href="#theses" class="scroll">Тезисы</a></li>
+                <li><a href="#registration" class="special scroll">Регистрация</a></li>
+                <li><a href="/2018">DTE 2018</a></li>
             </ul>
         </nav>
         <div class="container">
@@ -56,7 +56,7 @@
     <!--HEADER-->
 
     <!--DIRECTION-->
-    <div class="wrap">
+    <div class="wrap" id="direction">
         <div class="container">
             <h3 class="section-title">Направления</h3>
             <div class="row">
@@ -107,8 +107,19 @@
     </div>
     <!--DIRECTION-->
 
+    <!--Committee-->
+    <div class="wrap" id="committee">
+            <div class="container">
+                <h3 class="section-title">Организационный комитет</h3>
+                <div class="row">
+                    
+                </div>
+            </div>
+        </div>
+    <!--Committee-->
+
     <!--Theses-->
-    <div class="wrap">
+    <div class="wrap" id="theses">
             <div class="container">
                 <h3 class="section-title">Правила подачи тезисов</h3>
                 <div class="row">
@@ -126,16 +137,30 @@
     </div>
     <!--Theses-->
 
+    <!--Registration-->
+    <div class="wrap" id="registration">
+            <div class="container">
+                <h3 class="section-title">Регистарция</h3>
+                <div class="row">
+                    
+                </div>
+            </div>
+        </div>
+    <!--Registration-->
+
     <!--Map-->
     <div class="wrap map">
-            <div class="container">
-                <h3 class="section-title">Место проведения</h3>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div id="map"></div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <ul class="m-i-w">
+        <div id="map" style="height: 480px;"></div>
+    </div>
+    <!--Map-->
+
+    <!--FOOTER-->
+    <footer class="wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 f-i">
+                    <h3 class="section-title">Место проведения</h3>
+                    <ul class="m-i-w">
                             <li class="d-flex align-items-center">
                                 <img src="img/calendar.svg" alt="">
                                 27 Марта 2019
@@ -148,18 +173,9 @@
                                 <img src="img/clock-circular-outline.svg" alt="">
                                 Time
                             </li>
-                        </ul>
-                    </div>
-                </div>
-        </div>
-    </div>
-    <!--Map-->
-
-    <!--FOOTER-->
-    <footer class="wrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 f-i">
+                    </ul>
+                </div>                
+                <div class="col-lg-3 col-md-6 col-sm-12 f-i">
                     <h3 class="section-title">Контактная информация</h3>
                     <ul>
                         <li class="d-flex align-items-center">
@@ -172,7 +188,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 f-i">
+                <div class="col-lg-3 col-md-6 col-sm-12 f-i">
                     <h3 class="section-title">Поделиться</h3>       
                         <ul class="social">
                             <li>
@@ -187,14 +203,14 @@
                             </li>
                         </ul>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 f-i">
+                <div class="col-lg-3 col-md-6 col-sm-12 f-i">
                         <h3 class="section-title">Навигация</h3>
                         <ul class="adv-nav">
-                            <li><a href="#">Направления</a></li>
-                            <li><a href="#">Тезисы</a></li>
-                            <li><a href="#">Оргкомитет</a></li>
-                            <li><a href="#" class="special">Регистрация</a></li>
-                            <li><a href="#">DTE 2018</a></li>
+                            <li><a href="#direction" class="scroll">Направления</a></li>
+                            <li><a href="#committee" class="scroll">Оргкомитет</a></li>
+                            <li><a href="#theses" class="scroll">Тезисы</a></li>
+                            <li><a href="#registration" class="special scroll">Регистрация</a></li>
+                            <li><a href="/2018">DTE 2018</a></li>
                         </ul>
                 </div>
                 <div class="col-12">
