@@ -1,0 +1,120 @@
+@media screen and (max-width: 991px){
+    header {
+        padding: 100px 0 40px 0;
+    }
+    nav{
+        background-color: #000;
+    }
+    .hamburger{
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 0px 0px 0px 1px #fff;
+    }
+    .hamburger:hover{
+        cursor: pointer;
+    }
+    .hamburger::before {
+        content: "";
+        width: 70%;
+        top:10px;
+        left: 6px;
+        position: absolute;
+        border: 1px solid #fff;
+        transition: 0.4s;
+    }
+    .hamburger::after {
+        content: "";
+        width: 70%;
+        bottom:10px;
+        left: 6px;
+        position: absolute;
+        border: 1px solid #fff;
+        transition: 0.4s;
+    }
+    .hamburger .line{
+        width: 70%;
+        top: 19px;
+        left: 6px;
+        height: 2px;
+        position: absolute;
+        border: 1px solid #fff;
+        transition: 0.4s;
+    }
+    .hamburger.show .line{
+        width: 70%;
+        top:calc(40px - 21.21px);
+        left: 6px;
+        position: absolute;
+        border: 1px solid #fff;
+        transform: rotate(45deg);
+    }
+    .hamburger.show::before {
+        content: "";
+        width: 70%;
+        top:calc(40px - 21.21px);
+        left: 6px;
+        position: absolute;
+        border: 1px solid #fff;
+        transform: rotate(315deg);
+    }
+    .hamburger.show::after {
+        content: "";
+        width: 70%;
+        bottom:calc(40px - 21.21px);
+        left: 6px;
+        position: absolute;
+        border: 1px solid #fff;
+        transform: rotate(315deg);
+    }
+    nav ul{
+        display: none;
+        position: absolute;
+        width: 50%;
+        background-color: #000;
+        top: 80px;
+        right: 0;
+    }
+    nav ul li{
+        display: block;
+        text-align: center;
+        margin: 10px !important;
+    }
+    nav ul li a{
+        height: 100%;
+        width: 100%;
+        padding: 40px;
+        display: block;
+        border-radius: 0;
+    }
+    .logo-main{
+        padding: 40px;
+        width: 100%;
+        height: auto;
+    }
+    header h1,header h2{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 767px){
+    header h1 {
+        font-size: 2.2rem;
+    }
+}
+@media screen and (max-width: 425px){
+    nav ul{
+        width: 100%;
+    }
+    header h1 {
+        font-size: 1.7rem;
+    }
+    header h2 {
+        font-size: 1.5rem;
+    }
+    .c-t p {
+        font-size: 1.7rem;
+        min-width: 65px;
+    }
+}

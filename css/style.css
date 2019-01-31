@@ -29,7 +29,7 @@ a:hover{
     text-decoration: none;
 }
 header{
-    padding: 200px 0;
+    padding: 200px 0 120px 0;
     background-image: url(../img/82.png);
     background-attachment: fixed;
     background-size: cover;
@@ -63,6 +63,9 @@ nav{
 nav .logo{
     width: 60px;
     height: 60px;
+}
+.hamburger {
+    display: none;
 }
 nav > ul{
     list-style: none;
@@ -99,18 +102,16 @@ header .container{
     z-index: 2;
 }
 header h1{
-    text-align: center;
-    color: #fff;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 20px;
+    font-size: 3.65rem
 }
 header h2 {
     color: #fff;
-    text-align: center;
 }
 .c-t {
-    margin-top: 60px;
+    margin-top: 50px;
 }
 .c-t p {
     min-width: 80px;
@@ -135,31 +136,18 @@ header h2 {
     margin-bottom: 60px;
 }
 .d-w_d{
-    padding: 10px;
     box-shadow: 2px 2px 9px 0px #968c8c;
     border-radius: 15px;
     margin-bottom: 25px;
     position: relative;
 }
-.d_d-i{
-    width: 100%;
-    height: auto;
-    padding: 20px;
-}
 .d_d-t{
     margin: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0px;
-    z-index: 1;
     padding: 20px;
     border-radius: 15px;
-    background-color: rgba(0, 92, 130, 0.85);
+    background-color: rgba(0, 92, 130, 1);
     text-align: center;
     color: #fff;
-    transition: 350ms;
 }
 .map{
     position: relative;
@@ -187,6 +175,11 @@ div#map {
     height: auto;
     margin-right: 15px;
 } */
+.o-l img {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+}
 footer{
     background-color: #000;
     color: #fff;
