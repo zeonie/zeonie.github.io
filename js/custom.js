@@ -23,6 +23,7 @@ $(document).ready(function(){
         if ($('.hamburger').hasClass('show')){
             $('.hamburger').removeClass('show');
             $('nav ul').slideToggle();
+            $('html,body').css('overflow','auto')
         }
     });
     heightArray = [];
