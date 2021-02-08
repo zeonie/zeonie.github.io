@@ -236,6 +236,13 @@ HEADER .banner .info-wrap UL LI:first-child {
   margin-right: 24px;
   border-right: 3px solid #f3f3f3;
 }
+
+HEADER .banner .info-wrap UL LI:nth-child(2n) {
+  padding-right: 24px;
+  margin-right: 24px;
+  border-right: 3px solid #f3f3f3;
+}
+
 HEADER .banner .info-wrap .official-link {
   font-weight: 400;
   text-decoration: underline;
