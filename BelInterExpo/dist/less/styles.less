@@ -85,6 +85,9 @@ A {
 }
 .container {
   .container();
+  &._full {
+    padding: 0;
+  }
 }
 .inner {
   display: flex;
@@ -459,6 +462,53 @@ MAIN {
               background-size: 100% 100%;
               background-repeat: no-repeat;
             }
+          }
+        }
+      }
+    }
+    &#organization {
+      .member {
+        text-align: center;
+        background-color: @background-grey;
+        padding: 24px 32px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .member-photo {
+          max-width: 225px;
+          margin-bottom: 24px;
+        }
+        .member-name {
+          font-weight: 600;
+          color: @headers-color;
+          text-align: center;
+          font-size: 24px;
+          line-height: 19px;
+          margin-bottom: 12px;
+        }
+        .member-contacts {
+          UL {
+            padding: 0;
+            margin: 0;
+            LI {
+              margin-bottom: 0.5em;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              A {
+                color: @main-color;
+                font-weight: 400;
+                &:hover {
+                  color: @active-hover
+                }
+              }
+            }
+          }
+        }
+        &._big {
+          padding: 34px 32px;
+          .member-photo {
+            max-width: 251px;
           }
         }
       }
