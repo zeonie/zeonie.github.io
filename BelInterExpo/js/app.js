@@ -46,26 +46,18 @@ $(document).ready(function() {
         $(this).addClass('_is-active');
     })
     /*tabs*/
-    /**/
-    // window.fbAsyncInit = function() {
-    //     FB.init({
-    //         appId: '2795263637456879',
-    //         autoLogAppEvents: true,
-    //         xfbml: true,
-    //         version: 'v9.0'
-    //     });
-    //     FB.api(
-    //         '/ipebelarus/posts',
-    //         'GET',
-    //         {
-    //             access_token: 'EAAnuRwgqBZB8BAJjM81AHv67njL1cIvZBXJkOugMZCaw5Ay3ZCddRiN6DZCzSBQCZBy1zJDWHiVWHvMj25OchDxdrpxNre49DxO5M7TPEowE8K1wdH3qIXgBxhCjjI0CxPKYbdUU6Lwz0fZCmiOSjxZAe5bkDjbfUJXfsNHdJZCVVqkK18zLLMT32mhslI6njwTAZD',
-    //             fields:" full_picture,message,permalink_url,created_time",
-    //             limit: "6"
-    //         },
-    //         function (response) {
-    //             console.log(response);
-    //         }
-    //     );
-    // };
-    /**/
+    /*mobile nav*/
+    let hamburger = $('.hamburger'),
+        nav = $('#nav');
+    hamburger.on('click', function(e) {
+        e.preventDefault();
+        if ( nav.hasClass('_show') ) {
+            nav.removeClass('_show');
+            $(this).removeClass('_active');
+        } else {
+            nav.addClass('_show');
+            $(this).addClass('_active');
+        }
+    })
+    /*mobile nav*/
 })

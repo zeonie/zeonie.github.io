@@ -851,6 +851,11 @@ FOOTER {
     }
   }
 }
+@media (min-width: 867px) {
+  .hamburger {
+    display: none;
+  }
+}
 @media (max-width: 868px) {
   .container {
     max-width: 100%;
@@ -859,7 +864,48 @@ FOOTER {
       padding: 0;
     }
   }
+  BODY {
+    overflow-x: hidden;
+  }
   HEADER {
+    position: static;
+    .hamburger {
+      display: block;
+      width: 52px;
+      height: 52px;
+      position: relative;
+      cursor: pointer;
+      .lines {
+        position: absolute;
+        height: 2px;
+        width: 32px;
+        left: 10px;
+        top: calc(50% - 1px);
+        background-color: @white-color;
+        transition: all 0.3s ease-in;
+        &.top {
+          top: calc(30% - 1px);
+        }
+        &.bottom {
+          top: calc(70% - 1px);
+        }
+      }
+      &._active {
+        .lines {
+          &.middle {
+            opacity: 0;
+          }
+          &.top {
+            top: calc(50% - 1px);
+            transform: rotate(45deg);
+          }
+          &.bottom {
+            top: calc(50% - 1px);
+            transform: rotate(135deg);
+          }
+        }
+      }
+    }
     .banner {
       padding: 60px 0;
       .inner._center {
@@ -888,23 +934,190 @@ FOOTER {
     }
     #nav {
       position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
+      top: 52px;
+      left: unset;
+      right: -320px;
+      width: 320px;
+      -webkit-transform: none;
+      -ms-transform: none;
       transform: none;
       height: 100%;
-      z-index: 99999;
+      z-index: 9999;
+      transition: right 0.3s ease-in;
+      &._show {
+        right: 0;
+      }
       .container {
         padding: 0;
+        height: 100%;
       }
       .nav-items {
-        position: fixed;
-        width: 320px;
+        flex-wrap: wrap;
+        align-content: flex-start;
         height: 100%;
-        z-index: 99999;
-        flex-direction: column;
-        right: 0;
-        top: 0;
+        .nav-item {
+          flex: 1 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  MAIN {
+    padding-bottom: 24px;
+    .section {
+      &#events {
+        .events-list {
+          margin: 0 -12px;
+          .event-wrap {
+            margin-bottom: 24px;
+            padding: 0 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  H1, .h1 {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 1.8em;
+  }
+  H2, .h2 {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 1.6em;
+  }
+  H3, .h3 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 1.4em;
+  }
+  H4, .h4 {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 1.2em;
+  }
+  H5, .h5 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 1em;
+  }
+  .inner {
+    flex-wrap: wrap;
+  }
+  .w10,
+  .w20,
+  .w30,
+  .w40,
+  .w50,
+  .w60,
+  .w70,
+  .w80,
+  .w90,
+  .w100 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+  HEADER {
+    .banner {
+      .banner-logos {
+        flex: 1 0 280px;
+        max-width: 280px;
+      }
+    }
+    .inner {
+      flex-wrap: nowrap;
+      .w20 {
+        display: none;
+      }
+    }
+    .contact-items {
+      margin-right: 24px;
+      .contact-item {
+        margin-right: 12px;
+      }
+      & > IMG {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 545px) {
+  HEADER {
+    .contact-items {
+      display: none;
+    }
+    .banner {
+      .banner-logos {
+        flex: 1 0 100%;
+        max-width: 100%;
+      }
+      .info-wrap {
+        UL {
+          flex-wrap: wrap;
+          margin: 0 0 2em 0;
+          LI {
+            padding: 0 !important;
+            margin: 0 0 14px 0 !important;
+            border-right: 0;
+            width: 100%;
+            text-align: center;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  MAIN {
+    .section {
+      &#events {
+        .events-list {
+          .event-wrap {
+            flex: 1 0 100%;
+            max-width: 100%;
+          }
+        }
+      }
+      &#docs {
+        .docs-cards {
+          .docs-card {
+            flex: 1 0 100%;
+            max-width: 100%;
+            & > A {
+              padding: 22px;
+              border: 1px solid @white-color;
+            }
+          }
+        }
+      }
+      &#organization {
+        .member {
+          padding: 14px 22px;
+          margin-bottom: 12px;
+          &._big {
+            padding: 14px 22px;
+          }
+        }
+      }
+    }
+  }
+  FOOTER {
+    .form-wrap {
+      FORM {
+        .form-group {
+          INPUT {
+            width: 100%;
+            &:first-child {
+              margin-bottom: 22px;
+            }
+          }
+        }
       }
     }
   }
