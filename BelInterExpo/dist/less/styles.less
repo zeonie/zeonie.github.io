@@ -83,6 +83,11 @@ A {
     color: @active-hover;
   }
 }
+IMG {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .container {
   .container();
   &._full {
@@ -142,6 +147,26 @@ HEADER {
   & * {
     color: @white-color;
   }
+  A.logo-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    img {
+      width: auto;
+      height: 40px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 11px;
+      height: 18px;
+      background-image: url("../images/icons/left.svg");
+      background-size: 100% 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin-right: 7px;
+    }
+  }
   .lang-items {
     display: flex;
     .lang-item {
@@ -163,10 +188,10 @@ HEADER {
     }
   }
   .contact-items {
-    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 45px;
     .contact-icon {
       margin-right: 8px;
     }
@@ -188,7 +213,6 @@ HEADER {
     background-position: center center;
     background-repeat: no-repeat;
     .info-wrap {
-      max-width: 741px;
       .title {
         margin-bottom: 2em;
       }
@@ -213,6 +237,15 @@ HEADER {
         font-weight: 400;
         text-decoration: underline;
         color: @white-color;
+      }
+    }
+    .banner-logos {
+      padding: 56px 24px;
+      background: #f3f3f3;
+      & IMG {
+        &:first-child {
+          margin-bottom: 28px;
+        }
       }
     }
   }
@@ -246,7 +279,7 @@ HEADER {
 }
 MAIN {
   background-color: @white-color;
-  padding-bottom: 82px;
+  padding-bottom: 182px;
   .section {
     padding-top: 72px;
     .section-title {
@@ -555,5 +588,137 @@ FOOTER {
         }
       }
     }
+    .footer-additional {
+      position: absolute;
+      bottom: 32px;
+      max-width: 320px;
+      background-color: @active-color;
+      padding: 28px 22px;
+      .footer-additional-wrap {
+        color: #fff;
+        & > IMG {
+          width: 220px;
+          height: auto;
+          margin-bottom: 14px;
+        }
+        & > P {
+          margin-bottom: 0;
+        }
+        A.btn {
+          display: inline-flex;
+          align-items: center;
+          color: #fff;
+          font-size: 18px;
+          line-height: 21px;
+          margin-top: 32px;
+          &::after{
+            content: "";
+            display: block;
+            width: 11px;
+            height: 18px;
+            background-image: url("../images/icons/right.svg");
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+  }
+  .form-wrap {
+    margin-top: 82px;
+    .section-title{
+      color: @white-color;
+      text-align: center;
+    }
+    FORM {
+      max-width: 750px;
+      margin: 0 auto;
+      .form-group {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        & * {
+          padding: 8px;
+          background-color: rgba(255, 255, 255, 0.5);
+          color: @white-color;
+          border: 1px solid #979797;
+          font-size: 14px;
+          line-height: 16px;
+          &::-webkit-input-placeholder {
+            color: @white-color;
+          }
+          &:-moz-placeholder {
+            color: @white-color;
+          }
+          &::-moz-placeholder {
+            color: @white-color;
+          }
+          &:focus {
+            outline: none;
+            border-color: @white-color;
+          }
+        }
+        INPUT {
+          width: 48%;
+        }
+        TEXTAREA {
+          max-width: 100%;
+          min-width: 100%;
+          min-height: 95px;
+          margin: 22px 0;
+        }
+        BUTTON {
+          min-width: 205px;
+          margin: 0 auto;
+          background: #FFFFFF;
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.195772);
+          color: @headers-color;
+          text-align: center;
+          font-size: 16px;
+          line-height: 19px;
+          padding: 10px 5px;
+          cursor: pointer;
+          font-weight: 600;
+          transition: all 0.3s ease-in;
+          &:hover {
+            color: #FFFFFF;
+            background-color: @active-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Companie*/
+.companie {
+  HEADER {
+    position: relative;
+    padding: 32px 0;
+    overflow: hidden;
+    .backgorund-image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      IMG {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .container {
+      position: relative;
+    }
+  }
+  MAIN {
+    padding: 0;
+  }
+  FOOTER {
+    background-image: none;
+    padding: 0;
   }
 }

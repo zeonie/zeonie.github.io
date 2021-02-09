@@ -27,5 +27,4 @@ gulp.task('img', function() {
 });
 gulp.task('watch', function() {
     gulp.watch('dist/less/**/*.less', gulp.parallel('less'));
-    gulp.watch('dist/images/**/*', gulp.parallel('img'));
 });
