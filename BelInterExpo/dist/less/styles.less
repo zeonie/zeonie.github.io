@@ -97,6 +97,12 @@ A {
   &._normal {
     align-items: inherit;
   }
+  &._h-left {
+    justify-content: flex-end;
+  }
+}
+.w20 {
+  .w(20%);
 }
 .w30 {
   .w(30%);
@@ -112,6 +118,9 @@ A {
 }
 .w70 {
   .w(70%);
+}
+.w80 {
+  .w(80%);
 }
 .background-grey {
   background-color: @background-grey;
@@ -190,10 +199,13 @@ HEADER {
         LI {
           color: @white-color;
           margin-bottom: 0;
-          &:first-child {
-            padding-right: 24px;
-            margin-right: 24px;
-            border-right: 3px solid @white-color;
+          padding-right: 24px;
+          margin-right: 24px;
+          border-right: 3px solid @white-color;
+          &:last-child {
+            padding-right: 0;
+            margin-right: 0;
+            border-right: none;
           }
         }
       }
@@ -234,6 +246,7 @@ HEADER {
 }
 MAIN {
   background-color: @white-color;
+  padding-bottom: 82px;
   .section {
     padding-top: 72px;
     .section-title {
@@ -255,6 +268,7 @@ MAIN {
       }
       .about-card-video {
         position: relative;
+        min-height: 320px;
         & > IFRAME {
           border: 0;
           width: 100%;
@@ -509,6 +523,34 @@ MAIN {
           padding: 34px 32px;
           .member-photo {
             max-width: 251px;
+          }
+        }
+      }
+    }
+  }
+}
+FOOTER {
+  background-image: url(../images/footer.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 62px 0;
+  .main-footer {
+    background: @white-color;
+    padding: 72px 48px;
+    position: relative;
+    .icons-wrap {
+      margin-bottom: 24px;
+    }
+    .text-wrap {
+      P {
+        margin-bottom: 0;
+        & > A {
+          display: block;
+          color: @main-color;
+          font-weight: 400;
+          &:hover {
+            color: @active-hover;
           }
         }
       }

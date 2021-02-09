@@ -98,6 +98,17 @@ A:hover {
   -ms-flex-align: inherit;
   align-items: inherit;
 }
+.inner._h-left {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.w20 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 20%;
+  flex: 1 0 20%;
+  max-width: 20%;
+}
 .w30 {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 30%;
@@ -127,6 +138,12 @@ A:hover {
   -ms-flex: 1 0 70%;
   flex: 1 0 70%;
   max-width: 70%;
+}
+.w80 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 80%;
+  flex: 1 0 80%;
+  max-width: 80%;
 }
 .background-grey {
   background-color: #eaeaea;
@@ -230,11 +247,14 @@ HEADER .banner .info-wrap UL {
 HEADER .banner .info-wrap UL LI {
   color: #f3f3f3;
   margin-bottom: 0;
-}
-HEADER .banner .info-wrap UL LI:first-child {
   padding-right: 24px;
   margin-right: 24px;
   border-right: 3px solid #f3f3f3;
+}
+HEADER .banner .info-wrap UL LI:last-child {
+  padding-right: 0;
+  margin-right: 0;
+  border-right: none;
 }
 HEADER .banner .info-wrap .official-link {
   font-weight: 400;
@@ -278,6 +298,7 @@ HEADER #nav .nav-items .nav-item .nav-link:hover {
 }
 MAIN {
   background-color: #f3f3f3;
+  padding-bottom: 82px;
 }
 MAIN .section {
   padding-top: 72px;
@@ -300,6 +321,7 @@ MAIN .section#about-us .about-card-text P {
 }
 MAIN .section#about-us .about-card-video {
   position: relative;
+  min-height: 320px;
 }
 MAIN .section#about-us .about-card-video > IFRAME {
   border: 0;
@@ -570,4 +592,30 @@ MAIN .section#organization .member._big {
 }
 MAIN .section#organization .member._big .member-photo {
   max-width: 251px;
+}
+FOOTER {
+  background-image: url(../images/footer.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 62px 0;
+}
+FOOTER .main-footer {
+  background: #f3f3f3;
+  padding: 72px 48px;
+  position: relative;
+}
+FOOTER .main-footer .icons-wrap {
+  margin-bottom: 24px;
+}
+FOOTER .main-footer .text-wrap P {
+  margin-bottom: 0;
+}
+FOOTER .main-footer .text-wrap P > A {
+  display: block;
+  color: #3a3a3a;
+  font-weight: 400;
+}
+FOOTER .main-footer .text-wrap P > A:hover {
+  color: #3a9e19;
 }
