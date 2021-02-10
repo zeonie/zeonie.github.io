@@ -513,7 +513,7 @@ MAIN .section#products .tab-contents .tab-content .org-items .org-item {
 MAIN .section#products .tab-contents .tab-content .org-items .org-item IMG {
   display: block;
   margin-right: 1em;
-  max-height: 90px;
+  max-width: 74px;
 }
 MAIN .section#products .tab-contents .tab-content .org-items .org-item SPAN {
   color: #fff;
@@ -876,7 +876,20 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     line-height: 18px;
   }
   MAIN .section#products .tab-items .tab-item > A .tab-title {
-    line-height: 1em;
+    font-size: 1.3em;
+    line-height: 1.2em;
+  }
+  MAIN .section#products .tab-items .tab-item > A .tab-decscription {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.2em;
+  }
+  MAIN .section#products .tab-contents .tab-content {
+    min-height: 525px;
+  }
+  MAIN .section#products .tab-contents .tab-content .org-items .org-item SPAN {
+    font-size: 18px;
+    line-height: 22px;
   }
   FOOTER .main-footer {
     padding: 0 0 32px 0;
@@ -1131,6 +1144,83 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   HEADER .contact-items > IMG {
     display: none;
   }
+  MAIN .section#products .tab-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  MAIN .section#products .tab-items .tab-item > A {
+    height: 100%;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  }
+  MAIN .section#products .tab-items .tab-item > A._is-active {
+    border-right: 2px solid #4aca20;
+    border-bottom: 0;
+  }
+  MAIN .section#products .tab-items .tab-item > A .tab-title,
+  MAIN .section#products .tab-items .tab-item > A .tab-decscription {
+    display: none;
+  }
+  MAIN .section#products .tab-items .tab-item > A .tab-icon {
+    position: relative;
+    top: unset;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  MAIN .section#products .tab-contents .tab-content {
+    min-height: unset;
+    padding: 1em;
+  }
+  MAIN .section#products .tab-contents .tab-content P {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  MAIN .section#products .tab-contents .tab-content .org-items .org-item IMG {
+    margin-right: 8px;
+    max-width: 54px;
+  }
+  MAIN .section#products .tab-contents .tab-content .org-items .org-item SPAN {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 600px) {
+  FOOTER .main-footer .text-wrap,
+  FOOTER .main-footer .icons-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  FOOTER .main-footer .text-wrap .w20,
+  FOOTER .main-footer .icons-wrap .w20 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+  FOOTER .main-footer .icons-wrap {
+    width: 76px;
+    padding-right: 0;
+  }
+  FOOTER .main-footer .icons-wrap .footer-card {
+    margin-bottom: 12px;
+  }
+  FOOTER .main-footer .icons-wrap .footer-card IMG {
+    margin: 0 auto;
+  }
+  FOOTER .main-footer .text-wrap {
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    width: 70%;
+    padding-left: 12px;
+  }
 }
 @media (max-width: 545px) {
   HEADER .contact-items {
@@ -1179,6 +1269,12 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   }
   MAIN .section#organization .member._big {
     padding: 14px 22px;
+  }
+  MAIN .section#products .tab-items .tab-item > A {
+    padding: 10px;
+  }
+  MAIN .section#products .tab-contents .tab-content .org-items {
+    margin: 24px 0 0;
   }
   FOOTER .form-wrap FORM .form-group INPUT {
     width: 100%;

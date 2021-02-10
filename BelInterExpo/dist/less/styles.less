@@ -454,7 +454,7 @@ MAIN {
               IMG {
                 display: block;
                 margin-right: 1em;
-                max-height: 90px;
+                max-width: 74px;
               }
               SPAN {
                 color: #fff;
@@ -816,7 +816,26 @@ FOOTER {
           .tab-item {
             &  > A {
               .tab-title {
-                line-height: 1em;
+                font-size: 1.3em;
+                line-height: 1.2em;
+              }
+              .tab-decscription {
+                margin-top: 8px;
+                font-size: 12px;
+                line-height: 1.2em;
+              }
+            }
+          }
+        }
+        .tab-contents {
+          .tab-content {
+            min-height: 525px;
+            .org-items {
+              .org-item {
+                SPAN {
+                  font-size: 18px;
+                  line-height: 22px;
+                }
               }
             }
           }
@@ -977,7 +996,6 @@ FOOTER {
     }
   }
 }
-
 @media (max-width: 768px) {
   H1, .h1 {
     font-size: 26px;
@@ -1045,6 +1063,79 @@ FOOTER {
       }
     }
   }
+  MAIN {
+    .section {
+      &#products {
+        .tab-items {
+          display: flex;
+          align-items: stretch;
+          justify-content: center;
+          .tab-item {
+            & > A {
+              height: 100%;
+              align-content: center;
+              &._is-active {
+                border-right: 2px solid #4aca20;
+                border-bottom: 0;
+              }
+              .tab-title, .tab-decscription {
+                display: none;
+              }
+              .tab-icon {
+                position: relative;
+                top: unset;
+                transform: none;
+              }
+            }
+          }
+        }
+        .tab-contents .tab-content {
+          min-height: unset;
+          padding: 1em;
+          P {
+            font-size: 14px;
+            line-height: 18px;
+          }
+          .org-items .org-item IMG {
+            margin-right: 8px;
+            max-width: 54px;
+          }
+          .org-items .org-item SPAN {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  FOOTER {
+    .main-footer {
+      .text-wrap, .icons-wrap {
+        flex-wrap: wrap;
+        .w20 {
+          flex: 1 0 100%;
+          max-width: 100%;
+        }
+      }
+      .icons-wrap {
+        width: 76px;
+        padding-right: 0;
+        .footer-card {
+          margin-bottom: 12px;
+          IMG {
+            margin: 0 auto;
+          }
+        }
+      }
+      .text-wrap {
+        flex-shrink: 1;
+        width: 70%;
+        padding-left: 12px;
+      }
+    }
+  }
 }
 @media (max-width: 545px) {
   HEADER {
@@ -1104,6 +1195,12 @@ FOOTER {
             padding: 14px 22px;
           }
         }
+      }
+      &#products .tab-items .tab-item > A {
+        padding: 10px;
+      }
+      &#products .tab-contents .tab-content .org-items {
+        margin: 24px 0 0;
       }
     }
   }
