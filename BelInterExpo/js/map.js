@@ -21,7 +21,7 @@ $(document).ready(function() {
     });
 
     // Third Map
-    var $svgSections = $('.map-3 #overlay rect, .map-3 #overlay polygon');
+    var $svgSections = $('.map-3 #overlay rect, .map-3 #overlay polygon, .map-3 #overlay path');
     var $categorySelects = $('.category-select');
 
     $categorySelects.on('click', function(e){
