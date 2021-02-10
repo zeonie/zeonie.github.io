@@ -3,7 +3,9 @@ $(document).ready(function() {
         nav: false,
         dots: false,
         items: 1,
-        touch: true
+        touch: false,
+        animateOut: "fadeOut",
+        animateIn: "fadeIn"
     });
     $('.map-navigation').on('click', 'li', function(e) {
         $.each($('#map .map-navigation .owl-dot'), function(i, elem) {
