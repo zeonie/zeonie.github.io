@@ -104,20 +104,22 @@
   margin-right: 0;
 }
 #map .map-3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 50px;
+  padding: 24px 50px 50px;
   background: white;
 }
 #map .map-3 .svg-container {
-  width: 35%;
-  padding-right: 30px;
-  max-width: 800px;
   height: auto;
+  width: 80%;
+  margin-right: 24px;
+}
+#map .map-3 .flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 #map .map-3 #overlay RECT,
-#map .map-3 #overlay POLYGON {
+#map .map-3 #overlay POLYGON,
+#map .map-3 #overlay PATH {
   fill-opacity: 0;
   stroke: #fff;
   stroke-width: 10px;
@@ -129,29 +131,35 @@
 }
 #map .map-3 #overlay RECT.active,
 #map .map-3 #overlay POLYGON.active,
+#map .map-3 #overlay PATH.active,
 #map .map-3 #overlay RECT:hover,
-#map .map-3 #overlay POLYGON:hover {
+#map .map-3 #overlay POLYGON:hover,
+#map .map-3 #overlay PATH:hover {
   fill-opacity: 0.6;
   stroke-opacity: 0.75;
 }
 #map .map-3 #overlay RECT[category='milk'],
-#map .map-3 #overlay POLYGON[category='milk'] {
+#map .map-3 #overlay POLYGON[category='milk'],
+#map .map-3 #overlay PATH[category='milk'] {
   fill: #2f2fff;
 }
 #map .map-3 #overlay RECT[category='meat'],
-#map .map-3 #overlay POLYGON[category='meat'] {
+#map .map-3 #overlay POLYGON[category='meat'],
+#map .map-3 #overlay PATH[category='meat'] {
   fill: #b91c70;
 }
 #map .map-3 #overlay RECT[category='sweets'],
-#map .map-3 #overlay POLYGON[category='sweets'] {
+#map .map-3 #overlay POLYGON[category='sweets'],
+#map .map-3 #overlay PATH[category='sweets'] {
   fill: yellow;
 }
 #map .map-3 #overlay RECT[category='chicken-eggs'],
-#map .map-3 #overlay POLYGON[category='chicken-eggs'] {
+#map .map-3 #overlay POLYGON[category='chicken-eggs'],
+#map .map-3 #overlay PATH[category='chicken-eggs'] {
   fill: green;
 }
-#map .map-3 .description-wrapper {
-  padding: 38px;
+#map .map-3 #numbers PATH.shp1 {
+  fill: black;
 }
 #map .map-3 .description-wrapper OL {
   margin-left: 20px;
@@ -166,7 +174,6 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 24px;
 }
 #map .map-3 .filter-chooser span {
   padding: 5px 20px;
@@ -214,6 +221,15 @@
     stroke: rgba(122, 139, 68, 0);
   }
 }
+@media (max-width: 1500px) {
+  #map .map-3 .flex-wrapper {
+    display: block;
+  }
+  #map .map-3 .svg-container {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
 @media (max-width: 1300px) {
   #map .map {
     margin-bottom: 15px;
@@ -222,26 +238,15 @@
     bottom: -15px;
     left: 7%;
   }
-  #map .map-3 .svg-container {
-    width: 65%;
-    padding-right: 0;
-  }
 }
 @media (max-width: 1100px) {
   #map .map-slide .tooltip {
     width: 35%;
     left: 4%;
   }
-  #map .map-3 .description-wrapper {
-    padding: 18px;
-  }
   #map .map-3 .description-wrapper OL LI {
     font-size: 14px;
     margin-bottom: 8px;
-  }
-  #map .map-3 .svg-container {
-    width: 65%;
-    padding-right: 0;
   }
 }
 @media (max-width: 758px) {
@@ -252,17 +257,13 @@
   #map .map-3 {
     display: block;
   }
-  #map .map-3 .svg-container {
-    width: 70%;
-    margin: 0 auto 24px;
-  }
 }
 @media (max-width: 525px) {
   #map .map-3 {
     display: block;
-    padding: 0 15px;
+    padding: 15px;
   }
-  #map .map-3 .svg-container {
-    width: 90%;
+  #map .map-3 .flex-wrapper {
+    display: block;
   }
 }

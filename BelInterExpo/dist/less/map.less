@@ -112,18 +112,20 @@
   }
 
   &-3 {
-    display: flex;
-    padding: 0 50px;
+    padding: 24px 50px 50px;
     background: white;
     .svg-container {
-      width: 35%;
-      padding-right: 30px;
-      max-width: 800px;
       height: auto;
+      width: 80%;
+      margin-right: 24px;
+    }
+
+    .flex-wrapper {
+      display: flex;
     }
 
     #overlay {
-      RECT, POLYGON {
+      RECT, POLYGON, PATH {
         fill-opacity: 0;
         stroke: #fff;
         stroke-width: 10px;
@@ -152,9 +154,11 @@
       }
     }
 
-    .description-wrapper {
-      padding: 38px;
+    #numbers PATH.shp1 {
+      fill: black;
+    }
 
+    .description-wrapper {
       OL {
         margin-left: 20px;
         LI {
@@ -166,7 +170,6 @@
     .filter-chooser {
       display: flex;
       flex-wrap: wrap;
-      margin-bottom: 24px;
 
       span {
         padding: 5px 20px;
@@ -209,7 +212,19 @@
     stroke: rgba(122, 139, 68, 0);
   }
 }
-
+@media (max-width: 1500px) {
+  #map .map {
+    &-3 {
+      .flex-wrapper {
+        display: block;
+      }
+      .svg-container {
+        width: 100%;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
 @media (max-width: 1300px) {
   #map .map {
     margin-bottom: 15px;
@@ -217,13 +232,6 @@
       .tooltip {
         bottom: -15px;
         left: 7%;
-      }
-    }
-
-    &-3 {
-      .svg-container {
-        width: 65%;
-        padding-right: 0;
       }
     }
   }
@@ -239,15 +247,10 @@
 
     &-3 {
       .description-wrapper {
-        padding: 18px;
         OL LI {
           font-size: 14px;
           margin-bottom: 8px;
         }
-      }
-      .svg-container {
-        width: 65%;
-        padding-right: 0;
       }
     }
   }
@@ -264,10 +267,6 @@
 
     &-3 {
       display: block;
-      .svg-container {
-        width: 70%;
-        margin: 0 auto 24px;
-      }
     }
   }
 }
@@ -276,9 +275,9 @@
   #map .map {
     &-3 {
       display: block;
-      padding: 0 15px;
-      .svg-container {
-        width: 90%;
+      padding: 15px;
+      .flex-wrapper {
+        display: block;
       }
     }
   }
