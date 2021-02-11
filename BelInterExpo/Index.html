@@ -1898,9 +1898,10 @@
                                         <rect id="map-2-mask" width="1950" height="1500" x="0" y="18"/>
                                     </defs>
                                     <style>
-                                        #overlay RECT,
-                                        #overlay POLYGON,
-                                        #overlay PATH {
+                                        .overlay-meat,
+                                        .overlay-milk,
+                                        .overlay-sweets,
+                                        .overlay-chicken-eggs {
                                             fill-opacity: 0;
                                             stroke: #fff;
                                             stroke-width: 10px;
@@ -1908,26 +1909,24 @@
                                             pointer-events: all;
                                             transition: .3s;
                                         }
-                                        #overlay RECT.active,
-                                        #overlay POLYGON.active,
-                                        #overlay PATH.active,
-                                        #overlay RECT:hover,
-                                        #overlay POLYGON:hover,
-                                        #overlay PATH:hover {
+                                        .overlay-meat:hover,
+                                        .overlay-milk:hover,
+                                        .overlay-sweets:hover,
+                                        .overlay-chicken-eggs:hover {
                                             fill-opacity: 0.6;
                                             stroke-opacity: 0.75;
                                         }
 
-                                        #overlay PATH[category='milk'] {
+                                        .overlay-milk {
                                              fill: #2f2fff;
                                          }
-                                        #overlay PATH[category='meat'] {
+                                        .overlay-meat {
                                              fill: #b91c70;
                                          }
-                                        #overlay PATH[category='sweets'] {
+                                        .overlay-sweets {
                                              fill: yellow;
                                          }
-                                        #overlay PATH[category='chicken-eggs'] {
+                                        .overlay-chicken-eggs {
                                              fill: green;
                                          }
                                     </style>
@@ -1971,18 +1970,18 @@
                                             <path id="9 " fill-rule="evenodd" fill="#000" d="M2718.13 348.73C2693.98 348.73 2680.51 330.74 2680.51 312.74C2680.51 295.03 2693.32 277.45 2719.28 277.45C2743.1 277.45 2757.56 294.32 2757.56 316.28C2757.56 335.13 2748.53 362.76 2713.86 386.99C2712.05 388.27 2710.41 388.55 2708.77 388.55C2705.48 388.55 2703.02 386.57 2703.02 384.02C2703.02 381.18 2704.49 379.76 2706.14 378.49C2721.42 367.01 2735.55 351.14 2739.16 342.5C2732.59 347.6 2724.87 348.73 2718.13 348.73ZM2693.49 313.45C2693.49 329.18 2705.64 338.1 2718.95 338.1C2733.08 338.1 2745.08 330.31 2745.08 313.73C2745.08 301.69 2737.02 288.37 2718.79 288.37C2701.21 288.37 2693.49 302.11 2693.49 313.45Z" />
                                         </g>
                                         <g id="overlay">
-                                            <path id="pikant" fill-opacity="0" d="M2480 133L2971 133L2971 528L2480 528L2480 133Z" category="meat"/>
-                                            <path id="slonimsky" fill-opacity="0" d="M2093 133L2480 133L2480 528L2093 528L2093 133Z" category="meat"/>
-                                            <path id="babyshka-krinka" d="M2093 943L2480 943L2480 1338L2093 1338L2093 943Z" category="milk"/>
-                                            <path id="grodno" d="M2971 133L3462 133L3462 528L2971 528L2971 133Z" category="meat"/>
-                                            <path id="rogachev" d="M2971 943L3462 943L3462 1338L2971 1338L2971 943Z" category="milk"/>
-                                            <path id="molochny-goscinec" d="M2480 943L2971 943L2971 1338L2480 1338L2480 943Z" category="milk"/>
-                                            <path id="primemilk" d="M2093 528L2546 528L2546 943L2093 943L2093 528Z" category="milk"/>
-                                            <path id="molochny-mir" d="M3462 736L3874 736L3874 1339L3462 1339L3462 736Z" category="milk"/>
-                                            <path id="soligorsk" d="M3462 736L3874 736L3874 133L3462 133L3462 736Z" category="chicken-eggs"/>
-                                            <path id="bellakt" d="M103.71 780.89L430.47 780.89L430.47 88.12L103.71 88.12L103.71 780.89Z" category="milk"/>
-                                            <path id="vitba" d="M103.71 1343.14L878.9 1343.14L878.9 780.89L103.71 780.89L103.71 1343.14Z" category="sweets"/>
-                                            <path id="belgospischeprom" d="M878.9 1343.14L1695.3 1343.14L1695.3 87.89L1152.03 87.89L1152.03 780.89L878.9 780.89L878.9 1343.14Z" category="sweets"/>
+                                            <path id="pikant" class="overlay-meat" fill-opacity="0" d="M2480 133L2971 133L2971 528L2480 528L2480 133Z" category="meat"/>
+                                            <path id="slonimsky" class="overlay-meat" fill-opacity="0" d="M2093 133L2480 133L2480 528L2093 528L2093 133Z" category="meat"/>
+                                            <path id="babyshka-krinka" class="overlay-milk" d="M2093 943L2480 943L2480 1338L2093 1338L2093 943Z" category="milk"/>
+                                            <path id="grodno" class="overlay-meat" d="M2971 133L3462 133L3462 528L2971 528L2971 133Z" category="meat"/>
+                                            <path id="rogachev" class="overlay-milk" d="M2971 943L3462 943L3462 1338L2971 1338L2971 943Z" category="milk"/>
+                                            <path id="molochny-goscinec" class="overlay-milk" d="M2480 943L2971 943L2971 1338L2480 1338L2480 943Z" category="milk"/>
+                                            <path id="primemilk" class="overlay-milk" d="M2093 528L2546 528L2546 943L2093 943L2093 528Z" category="milk"/>
+                                            <path id="molochny-mir" class="overlay-milk" d="M3462 736L3874 736L3874 1339L3462 1339L3462 736Z" category="milk"/>
+                                            <path id="soligorsk" class="overlay-chicken-eggs" d="M3462 736L3874 736L3874 133L3462 133L3462 736Z" category="chicken-eggs"/>
+                                            <path id="bellakt" class="overlay-milk" d="M103.71 780.89L430.47 780.89L430.47 88.12L103.71 88.12L103.71 780.89Z" category="milk"/>
+                                            <path id="vitba" class="overlay-sweets" d="M103.71 1343.14L878.9 1343.14L878.9 780.89L103.71 780.89L103.71 1343.14Z" category="sweets"/>
+                                            <path id="belgospischeprom" class="overlay-sweets" d="M878.9 1343.14L1695.3 1343.14L1695.3 87.89L1152.03 87.89L1152.03 780.89L878.9 780.89L878.9 1343.14Z" category="sweets"/>
                                         </g>
                                     </g>
                                 </svg>
