@@ -43,7 +43,7 @@ $(document).ready(function() {
 
     function unhightlightAll(array) {
         $.each(array, function(ind, element) {
-            $(element).removeClass('active');
+            $(element).removeClass('overlay-active');
         });
     }
 
