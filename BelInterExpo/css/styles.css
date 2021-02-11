@@ -368,7 +368,6 @@ MAIN .section#about-us .about-card-video > IFRAME {
 MAIN .section#about-us .text-center {
   text-align: center;
   margin-top: 105px;
-  margin-bottom: 30px;
 }
 MAIN .section#about-us .text-center > P {
   margin-bottom: 0;
@@ -779,7 +778,7 @@ FOOTER .main-footer .text-wrap P > A:hover {
 FOOTER .main-footer .footer-additional {
   position: absolute;
   bottom: 32px;
-  max-width: 370px;
+  max-width: 320px;
   background-color: #4aca20;
   padding: 28px 22px;
 }
