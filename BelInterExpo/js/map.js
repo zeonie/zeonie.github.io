@@ -36,8 +36,8 @@ $(document).ready(function() {
     function highlightSvgSections(category, hightlight) {
         var categorySvgSections = $.grep($svgSections,function(e){ return $(e).attr('category') == category; });
         $.each(categorySvgSections, function(ind, value) {
-            if(hightlight) $(categorySvgSections[ind]).addClass('active');
-            else $(categorySvgSections[ind]).removeClass('active');
+            if(hightlight) $(categorySvgSections[ind]).addClass('overlay-active');
+            else $(categorySvgSections[ind]).removeClass('overlay-active');
         });
     }
 
