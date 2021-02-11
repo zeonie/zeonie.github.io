@@ -1897,6 +1897,40 @@
                                     <defs>
                                         <rect id="map-2-mask" width="1950" height="1500" x="0" y="18"/>
                                     </defs>
+                                    <style>
+                                        #overlay RECT,
+                                        #overlay POLYGON,
+                                        #overlay PATH {
+                                            fill-opacity: 0;
+                                            stroke: #fff;
+                                            stroke-width: 10px;
+                                            stroke-opacity: 0.5;
+                                            pointer-events: all;
+                                            transition: .3s;
+                                        }
+                                        #overlay RECT.active,
+                                        #overlay POLYGON.active,
+                                        #overlay PATH.active,
+                                        #overlay RECT:hover,
+                                        #overlay POLYGON:hover,
+                                        #overlay PATH:hover {
+                                            fill-opacity: 0.6;
+                                            stroke-opacity: 0.75;
+                                        }
+
+                                        #overlay PATH[category='milk'] {
+                                             fill: #2f2fff;
+                                         }
+                                        #overlay PATH[category='meat'] {
+                                             fill: #b91c70;
+                                         }
+                                        #overlay PATH[category='sweets'] {
+                                             fill: yellow;
+                                         }
+                                        #overlay PATH[category='chicken-eggs'] {
+                                             fill: green;
+                                         }
+                                    </style>
                                     <g id="map3">
                                         <g id="Group">
                                             <image id="pav1_top-view" x="1966" y="18" width="2000" height="1500" href="images/map/pav1_top-view.png"></image>
