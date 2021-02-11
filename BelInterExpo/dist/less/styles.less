@@ -356,6 +356,49 @@ MAIN {
           }
         }
       }
+      .member-list {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: @background-grey;
+        .member {
+          flex: 1 0  33.333333%;
+          max-width: 33.333333%;
+          padding: 22px 14px;
+          background-color: @background-grey;
+          display: flex;
+          align-items: center;
+          .photo {
+            min-width: 125px;
+            height: 220px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 14px;
+            IMG {
+              width: auto;
+              max-width: unset;
+              height: 100%;
+              display: block;
+            }
+          }
+          .info {
+            * {
+              margin: 0;
+            }
+            & > DIV {
+              margin-bottom: 4px;
+            }
+            & A {
+              color: @main-color;
+              font-weight: 400;
+              &:hover {
+                color: @active-hover;
+              }
+            }
+          }
+        }
+      }
     }
     &#products {
       .tab-items {
@@ -853,6 +896,48 @@ FOOTER {
           }
         }
       }
+      &#about-us {
+        .member-list {
+          .member {
+            flex: 1 0  50%;
+            max-width: 50%;
+            padding: 22px 14px;
+            background-color: @background-grey;
+            display: flex;
+            align-items: center;
+            .photo {
+              min-width: 125px;
+              height: 220px;
+              overflow: hidden;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-right: 14px;
+              IMG {
+                width: auto;
+                max-width: unset;
+                height: 100%;
+                display: block;
+              }
+            }
+            .info {
+              * {
+                margin: 0;
+              }
+              & > DIV {
+                margin-bottom: 4px;
+              }
+              & A {
+                color: @main-color;
+                font-weight: 400;
+                &:hover {
+                  color: @active-hover;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
   FOOTER {
@@ -1145,6 +1230,53 @@ FOOTER {
         flex-shrink: 1;
         width: 70%;
         padding-left: 12px;
+      }
+    }
+  }
+  MAIN {
+    .section {
+      &#about-us {
+        .member-list {
+          .member {
+            flex: 1 0 100%;
+            max-width: 100%;
+            padding: 14px 10px;
+            background-color: @background-grey;
+            display: flex;
+            align-items: center;
+            .photo {
+              max-width: 100px;
+              height: 100px;
+              overflow: hidden;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-right: 7px;
+              IMG {
+                width: 100%;
+                max-width: unset;
+                height: auto;
+                display: block;
+              }
+            }
+            .info {
+              * {
+                margin: 0;
+              }
+              & > DIV {
+                margin-bottom: 4px;
+                font-size: 13px;
+              }
+              & A {
+                color: @main-color;
+                font-weight: 400;
+                &:hover {
+                  color: @active-hover;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

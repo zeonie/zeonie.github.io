@@ -368,6 +368,7 @@ MAIN .section#about-us .about-card-video > IFRAME {
 MAIN .section#about-us .text-center {
   text-align: center;
   margin-top: 105px;
+  margin-bottom: 30px;
 }
 MAIN .section#about-us .text-center > P {
   margin-bottom: 0;
@@ -406,6 +407,62 @@ MAIN .section#about-us .carousel-wrap .owl-dots > .owl-dot:hover {
 }
 MAIN .section#about-us .carousel-wrap .owl-dots > .owl-dot.active {
   background-color: #4aca20;
+}
+MAIN .section#about-us .member-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color: #eaeaea;
+}
+MAIN .section#about-us .member-list .member {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 33.333333%;
+  flex: 1 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 22px 14px;
+  background-color: #eaeaea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+MAIN .section#about-us .member-list .member .photo {
+  min-width: 125px;
+  height: 220px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 14px;
+}
+MAIN .section#about-us .member-list .member .photo IMG {
+  width: auto;
+  max-width: unset;
+  height: 100%;
+  display: block;
+}
+MAIN .section#about-us .member-list .member .info * {
+  margin: 0;
+}
+MAIN .section#about-us .member-list .member .info > DIV {
+  margin-bottom: 4px;
+}
+MAIN .section#about-us .member-list .member .info A {
+  color: #3a3a3a;
+  font-weight: 400;
+}
+MAIN .section#about-us .member-list .member .info A:hover {
+  color: #3a9e19;
 }
 MAIN .section#products .tab-items {
   margin: 0;
@@ -722,7 +779,7 @@ FOOTER .main-footer .text-wrap P > A:hover {
 FOOTER .main-footer .footer-additional {
   position: absolute;
   bottom: 32px;
-  max-width: 320px;
+  max-width: 370px;
   background-color: #4aca20;
   padding: 28px 22px;
 }
@@ -896,6 +953,54 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   MAIN .section#products .tab-contents .tab-content .org-items .org-item SPAN {
     font-size: 18px;
     line-height: 22px;
+  }
+  MAIN .section#about-us .member-list .member {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0  50%;
+    flex: 1 0  50%;
+    max-width: 50%;
+    padding: 22px 14px;
+    background-color: #eaeaea;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  MAIN .section#about-us .member-list .member .photo {
+    min-width: 125px;
+    height: 220px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: 14px;
+  }
+  MAIN .section#about-us .member-list .member .photo IMG {
+    width: auto;
+    max-width: unset;
+    height: 100%;
+    display: block;
+  }
+  MAIN .section#about-us .member-list .member .info * {
+    margin: 0;
+  }
+  MAIN .section#about-us .member-list .member .info > DIV {
+    margin-bottom: 4px;
+  }
+  MAIN .section#about-us .member-list .member .info A {
+    color: #3a3a3a;
+    font-weight: 400;
+  }
+  MAIN .section#about-us .member-list .member .info A:hover {
+    color: #3a9e19;
   }
   FOOTER .main-footer {
     padding: 0 0 32px 0;
@@ -1226,6 +1331,55 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     flex-shrink: 1;
     width: 70%;
     padding-left: 12px;
+  }
+  MAIN .section#about-us .member-list .member {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    max-width: 100%;
+    padding: 14px 10px;
+    background-color: #eaeaea;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  MAIN .section#about-us .member-list .member .photo {
+    max-width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: 7px;
+  }
+  MAIN .section#about-us .member-list .member .photo IMG {
+    width: 100%;
+    max-width: unset;
+    height: auto;
+    display: block;
+  }
+  MAIN .section#about-us .member-list .member .info * {
+    margin: 0;
+  }
+  MAIN .section#about-us .member-list .member .info > DIV {
+    margin-bottom: 4px;
+    font-size: 13px;
+  }
+  MAIN .section#about-us .member-list .member .info A {
+    color: #3a3a3a;
+    font-weight: 400;
+  }
+  MAIN .section#about-us .member-list .member .info A:hover {
+    color: #3a9e19;
   }
 }
 @media (max-width: 545px) {
