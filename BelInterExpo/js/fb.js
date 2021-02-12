@@ -9,7 +9,7 @@ window.fbAsyncInit = function() {
         '/belinterexpo.by/posts',
         'GET',
         {
-            access_token: 'EAAWxzUVWDqcBAFtvQI3qdYCxbjEZBFNsxXsxhCxsxp9OVgOjtSyedKAcWqmMZCSjFfpgJq4mQ5qCqE6BZBPqob1zChhaaZBZCfZCZAZB6sseua8gSaoETdlz3MQfZBaQRzdxZAoOW39mpQcHkpRD3nLriddZC5MPBYQqBhvZAupwGZAQyQ18qlzH6OZBhrqI9vnu3bdu115Pl0xQbRXAZDZD',
+            access_token: 'EAAWxzUVWDqcBAJy1Evqaq4B4AsOoefmJe6bBziZAcBW7lHaJsAvshSIznzDGN4z7XcRO32lpQFQjNRRZCJaM9nA5iW09oK2Fe4PbSkQZBb2qRLP2E0cYwG1L5tWR9wy3EcDlDXg5RZCZASo16GSVzZCLv3tK3Ca8o7chgZBcaiw0px3Og8p9uYChUGXmVz8ZBVn4CQbqQ9HhywZDZD',
             fields:" full_picture,message,permalink_url,created_time",
             limit: "6"
         },
