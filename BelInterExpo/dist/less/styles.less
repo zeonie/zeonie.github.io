@@ -401,14 +401,25 @@ MAIN {
       }
     }
     &#products {
+      .inner {
+        flex-wrap: wrap;
+      }
+      .w40, .w60 {
+        flex: 1 0 100%;
+        max-width: 100%;
+      }
       .tab-items {
         margin: 0;
         padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .tab-item {
           & > A {
             display: flex;
-            flex-wrap: wrap;
-            padding: 1em;
+            align-items: center;
+            height: 62px;
+            padding: 0.5em 1em;
             background-color: @background-grey;
             border: 2px solid @background-grey;
             position: relative;
@@ -432,13 +443,13 @@ MAIN {
             }
             .tab-title, .tab-decscription {
               margin-left: 58px;
+              display: none !important;
             }
             .tab-title {
-              font-size: 1.5em;
-              line-height: 1.2em;
-              display: block;
               width: 100%;
               color: @headers-color;
+              display: block !important;
+              margin: 0 0 0 14px;
             }
             .tab-decscription {
               font-style: italic;
@@ -447,13 +458,9 @@ MAIN {
               display: block;
             }
             .tab-icon {
-              width: 43px;
               display: block;
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
               & > IMG {
-                width: 100%;
+                width: 42px;
                 &.no-active {
                   display: block;
                 }
@@ -465,7 +472,7 @@ MAIN {
             &._is-active {
               background-color: #fff;
               border: 2px solid @active-color;
-              border-right: none;
+              border-bottom: none;
               pointer-events: none;
               .tab-icon {
                 & > IMG {
@@ -500,21 +507,43 @@ MAIN {
             line-height: 21px;
           }
           .org-items {
-            margin: 60px 0 0;
+            margin: 34px 0 0;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
             .org-item {
+              flex: 1 0 33.3333333%;
+              max-width: 33.3333333%;
               display: flex;
               align-items: center;
-              margin-bottom: 2em;
+              cursor: pointer;
+              min-height: 82px;
+              padding: 1em;
+              border-left: 2px solid #fff;
+              margin-bottom: 0.5em;
+              transition: all 0.3s ease-in;
+              &:first-child {
+                border-left: none;
+              }
+              &:nth-child(4n) {
+                border-left: none;
+              }
               IMG {
                 display: block;
                 margin-right: 1em;
-                max-width: 74px;
+                max-width: 44px;
               }
               SPAN {
                 color: #fff;
-                font-size: 24px;
-                line-height: 26px;
+                font-size: 14px;
+                line-height: 18px;
+              }
+              &:hover {
+                background-color: #fff;
+                & SPAN {
+                  color: @headers-color;
+                }
               }
             }
           }
@@ -870,10 +899,6 @@ FOOTER {
         .tab-items {
           .tab-item {
             &  > A {
-              .tab-title {
-                font-size: 1.3em;
-                line-height: 1.2em;
-              }
               .tab-decscription {
                 margin-top: 8px;
                 font-size: 12px;
@@ -884,12 +909,11 @@ FOOTER {
         }
         .tab-contents {
           .tab-content {
-            min-height: 525px;
             .org-items {
               .org-item {
                 SPAN {
-                  font-size: 18px;
-                  line-height: 22px;
+                  font-size: 14px;
+                  line-height: 18px;
                 }
               }
             }
@@ -1176,7 +1200,7 @@ FOOTER {
                 border-bottom: 0;
               }
               .tab-title, .tab-decscription {
-                display: none;
+                display: none !important;
               }
               .tab-icon {
                 position: relative;
@@ -1345,6 +1369,16 @@ FOOTER {
       }
       &#products .tab-contents .tab-content .org-items {
         margin: 24px 0 0;
+      }
+      &#products .tab-contents .tab-content .org-items .org-item {
+        flex: 1 0 100% !important;
+        max-width: 100% !important;
+        padding: 0.5em;
+        border-left: none !important;
+        border-top: 2px solid #fff;
+        &:first-child {
+          border-top: none;
+        }
       }
     }
   }
@@ -1720,6 +1754,16 @@ FOOTER {
   }
   .companie HEADER .inner._center.h_between .company-info .company-contacts LI {
     margin: 0 0 16px 0;
+  }
+  MAIN .section#products .tab-contents .tab-content .org-items .org-item {
+    flex: 1 0 50%;
+    max-width: 50%;
+  }
+  MAIN .section#products .tab-contents .tab-content .org-items .org-item:nth-child(odd) {
+    border-left: none;
+  }
+  MAIN .section#products .tab-contents .tab-content .org-items .org-item:nth-child(4n) {
+    border-left: 2px solid #fff;
   }
 }
 @media (max-width: 991px) {
