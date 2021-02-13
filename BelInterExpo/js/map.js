@@ -5,7 +5,9 @@ $(document).ready(function() {
         items: 1,
         touch: false,
         animateOut: "fadeOut",
-        animateIn: "fadeIn"
+        animateIn: "fadeIn",
+        mouseDrag: false,
+        touchDrag: false
     });
     $('.map-navigation').on('click', 'li', function(e) {
         $.each($('#map .map-navigation .owl-dot'), function(i, elem) {
@@ -18,7 +20,7 @@ $(document).ready(function() {
     $('#map .map-1 #Belarussian').on('click', function(){
         $('.map-navigation li:nth-child(2)').trigger('click');
     });
-    $('#map .map-2 #belarus-stands').on('click', function(){
+    $('#map .map-2 #belarus-next').on('click', function(){
         $('.map-navigation li:nth-child(3)').trigger('click');
     });
 
@@ -55,7 +57,6 @@ $(document).ready(function() {
     const resetButton = document.getElementById('reset');
     const panzoom = Panzoom(elem, {
         cursor: 'move',
-        startScale: 1.6,
         // startX: -10,
         // startY: -74
     });
