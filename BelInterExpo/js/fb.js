@@ -9,12 +9,16 @@ window.fbAsyncInit = function() {
         '/belinterexpo.by/posts',
         'GET',
         {
-            access_token: 'EAAWxzUVWDqcBAJy1Evqaq4B4AsOoefmJe6bBziZAcBW7lHaJsAvshSIznzDGN4z7XcRO32lpQFQjNRRZCJaM9nA5iW09oK2Fe4PbSkQZBb2qRLP2E0cYwG1L5tWR9wy3EcDlDXg5RZCZASo16GSVzZCLv3tK3Ca8o7chgZBcaiw0px3Og8p9uYChUGXmVz8ZBVn4CQbqQ9HhywZDZD',
-            fields:" full_picture,message,permalink_url,created_time",
+            access_token: 'EAAWxzUVWDqcBAAHZAm0UcZBM1bBZAkFEpCOi8ERkP8hkyuLCz4HxoISL1XGHKQ3c9KtYXIdhd0D00eEQ6nK0eahxMLrkEw3Oh5rLM7byuezrYZAtQZAmRKRPZCyEqEoZCmjEvrSmKJZAPY4YNYsdUcNOgICnMFwpy60pxyTY4MhCygi4RypObEaW',
+            fields:" full_picture,message,permalink_url",
             limit: "6"
         },
         function (response) {
-            console.log(response);
+            let $ = jQuery;
+            let need_data = response.data;
+            for ( let i = 0; i < need_data.length; i++ ) {
+                $('facebook_list').append('<div class="event-wrap"><div class="event"><div class="image-wrap"><img src="' + response.data[i].full_picture + '"></div><div class="event-text"><p>' + response.data[i].message + '</p></div><a href="' + response.data[i].permalink_url + '" target="_blank" class="arrow-right">Read more</a></div></div>');
+            }
         }
     );
 }
