@@ -5,8 +5,6 @@
         <title>Gulfood live in-person</title>
         <meta name="description" content="Exposition Belarus - the Taste of Nature at Gulfood 2021">
         <meta name="keywords" content="">
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-        <script src="js/fb.js"></script>
         <link rel="icon" href="favicon.png" type="image/x-icon">
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="css/fonts.css">
@@ -169,9 +167,6 @@
                         <a href="images/render/pav1-view5.png" class="about-img-link">
                             <img src="images/render/pav1-view5.png">
                         </a>
-                        <!-- <a href="images/render/pav1-view6.png" class="about-img-link">
-                            <img src="images/render/pav1-view6.png">
-                        </a> -->
                         <a href="images/render/pav1-view7.png" class="about-img-link">
                             <img src="images/render/pav1-view7.png">
                         </a>
@@ -338,76 +333,76 @@
                         <div class="w60">
                             <div class="tab-contents">
                                 <div class="tab-content _is-active" id="meat">
-                                    <p>
+                                    <span class="tab-decscription">
                                         Организации, которые производят мясную продукци
-                                    </p>
+                                    </span>
                                     <ul class="org-items">
-                                        <li class="org-item">
+                                        <li class="org-item" data-id="grodno">
                                             <img src="images/logo/grodnomyaso.png" title="Гродненский мясокомбинат" alt="Гродненский мясокомбинат">
                                             <span>Гродненский мясокомбинат</span>
 
                                         </li>
-                                        <li class="org-item">
+                                        <li class="org-item" data-id="pikant">
                                             <img src="images/logo/pikant.png" title="Пинский мясокомбинат" alt="Пинский мясокомбинат">
                                             <span>Пинский мясокомбинат</span>
                                         </li>
-                                        <li class="org-item">
+                                        <li class="org-item" data-id="slonimsky">
                                             <img src="images/logo/slonimsky.png" title="Слонимский мясокомбинат" alt="Слонимский мясокомбинат">
                                             <span>Слонимский мясокомбинат</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="tab-content" id="milk">
-                                    <p>
+                                    <span class="tab-decscription">
                                         Организации, которые производят молочную продукцию
-                                    </p>
-                                    <ul class="org-items">
+                                    </span>
+                                    <ul class="org-items" data-id="molochny-mir">
                                         <li class="org-item">
                                             <img src="images/logo/milkmir.png" title="Molochny Mir" alt="Molochny Mir">
                                             <span>Молочный Мир</span>
                                         </li>
-                                        <li class="org-item">
+                                        <li class="org-item" data-id="primemilk">
                                             <img src="images/logo/primemilk.png" title="Primemilk" alt="Primemilk">
                                             <span>Праймилк</span>
                                         </li>
-                                        <li class="org-item">
+                                        <li class="org-item" data-id="babyshka-krinka">
                                             <img src="images/logo/babushka.png" title="Babushkina krynka" alt="Babushkina krynka">
                                             <span>Бабушкина крынка</span>
                                         </li>
-                                        <li class="org-item">
+                                        <li class="org-item" data-id="molochny-goscinec">
                                             <img src="images/logo/milkgostinec.png" title="Molochny Gostinets" alt="Molochny Gostinets">
                                             <span>Молочный гостинец</span>
                                         </li>
-                                        <li class="org-item">
+                                        <li class="org-item" data-id="bellakt">
                                             <img src="images/logo/belakt.png" title="Bellakt" alt="Bellakt">
                                             <span>Беллакт</span>
                                         </li>
-                                        <li class="org-item">
+                                        <li class="org-item" data-id="rogachev">
                                             <img src="images/logo/rogachev.png" title="Rogachev Tinned Dairy Industrial Complex" alt="Rogachev Tinned Dairy Industrial Complex">
                                             <span>Рогачёвский молочноконсервный комбинат</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="tab-content" id="sweets">
-                                    <p>
+                                    <span class="tab-decscription">
                                         Организации, которые производят кондитерские изделия, готовые завтраки и бакалею
-                                    </p>
-                                    <ul class="org-items">
+                                    </span>
+                                    <ul class="org-items" data-id="belgospischeprom">
                                         <li class="org-item">
                                             <img src="images/logo/belgospischeprom.png" title="Belarusian State Food Industry Concern BELGOSPISHCHEPROM" alt="Belarusian State Food Industry Concern BELGOSPISHCHEPROM">
                                             <span>Белорусский государственный концерн пищевой промышленности "Белгоспищепром"</span>
                                         </li>
-                                        <li class="org-item">
+                                        <li class="org-item" data-id="vitba">
                                             <img src="images/logo/vitba.png" title="Confectionery factory VITBA" alt="Confectionery factory VITBA">
                                             <span>Кондитерская фабрика "Витьба"</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="tab-content" id="chicken">
-                                    <p>
+                                    <span class="tab-decscription">
                                         Организации, которые производят яйца и продукцию из мяса птицы
-                                    </p>
-                                    <ul class="org-items">
+                                    </span>
+                                    <ul class="org-items" data-id="soligorsk">
                                         <li class="org-item">
                                             <img src="images/logo/soligorsk.jpg" title="Soligorsk Poultry Factory" alt="Soligorsk Poultry Factory">
                                             <span>Солигорская птицефабрика</span>
@@ -2000,14 +1995,29 @@
                                         <li><a>Старший менеджер проектов</a></li>
                                         <li><a href="mailto:mail@belinterexpo.by">mail@belinterexpo.by</a></li>
                                         <li><a href="tel:+375445091202">+375 (44) 509-12-02</a></li>
-                                        <li id="c_tg"><a href="tg://resolve?domain=@anastasiya_korneyeva">TG</a></li>
-                                        <li id="c_wapp"><a href="whatsapp://send?phone=+375445091202">WhatsApp</a></li>
-                                        <li id="c_wechat"><a href="https://msngr.link/wc/375445091202">WeChat</a></li>
-                                        <li id="c_viber"><a href="viber://chat?number=%2B375445091202">Viber</a></li>
+                                        <li id="c_tg"><a href="tg://resolve?domain=@anastasiya_korneyeva" target="_blank">TG</a></li>
+                                        <li id="c_wapp"><a href="whatsapp://send?phone=+375445091202" target="_blank">WhatsApp</a></li>
+                                        <li id="c_wechat"><a href="weixin://dl/chat?375445091202" target="_blank">WeChat</a></li>
+                                        <li id="c_viber"><a href="viber://chat?number=%2B375445091202" target="_blank">Viber</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="member _big w40">
+                                <div class="member-photo"><img src="images/person-main/prineslik.jpg"></div>
+                                <div class="member-name"><span>Анна Принеслик</span></div>
+                                <div class="member-contacts">
+                                    <ul>
+                                        <li><a>Начальник отдела зарубежных выставок</a></li>
+                                        <li><a href="mailto:mail@belinterexpo.by">mail@belinterexpo.by</a></li>
+                                        <li><a href="tel:375445091206">+375 (44) 509-12-06</a></li>
+                                        <li id="c_tg"><a href="tg://resolve?domain=@annaprineslik" target="_blank">TG</a></li>
+                                        <li id="c_wapp"><a href="whatsapp://send?phone=+375296139584" target="_blank">WhatsApp</a></li>
+                                        <li id="c_wechat"><a href="https://msngr.link/wc/375296139584" target="_blank">WeChat</a></li>
+                                        <li id="c_viber"><a href="viber://chat?number=%2B375296139584" target="_blank">Viber</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="member w30">
                                 <div class="member-photo"><img src="images/person-main/photo-director.jpg"></div>
                                 <div class="member-name"><span>Евгений Введенский</span></div>
                                 <div class="member-contacts">
@@ -2015,25 +2025,10 @@
                                         <li><a>Директор</a></li>
                                         <li><a href="mailto:mail@belinterexpo.by">mail@belinterexpo.by</a></li>
                                         <li><a href="tel:+375447268087">+375 (44) 726-80-87</a></li>
-                                        <li id="c_tg"><a href="tg://resolve?domain=@Evvved">TG</a></li>
-                                        <li id="c_wapp"><a href="whatsapp://send?phone=+375447268087">WhatsApp</a></li>
-                                        <li id="c_wechat"><a href="https://msngr.link/wc/375447268087">WeChat</a></li>
-                                        <li id="c_viber"><a href="viber://chat?number=%2B375447268087">Viber</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="member w30">
-                                <div class="member-photo"><img src="images/person-main/prineslik.jpg"></div>
-                                <div class="member-name"><span>Анна Принеслик</span></div>
-                                <div class="member-contacts">
-                                    <ul>
-                                        <li><a>Начальник отдела зарубежных выставок</a></li>
-                                        <li><a href="mailto:mail@belinterexpo.by">mail@belinterexpo.by</a></li>
-                                        <li><a href="tel:+375445091206">+375 (44) 509-12-06</a></li>
-                                        <li id="c_tg"><a href="375296139584">TG</a></li>
-                                        <li id="c_wapp"><a href="whatsapp://send?phone=+375296139584">WhatsApp</a></li>
-                                        <li id="c_wechat"><a href="https://msngr.link/wc/375296139584">WeChat</a></li>
-                                        <li id="c_viber"><a href="viber://chat?number=%2B375296139584">Viber</a></li>
+                                        <li id="c_tg"><a href="tg://resolve?domain=@Evvved" target="_blank">TG</a></li>
+                                        <li id="c_wapp"><a href="whatsapp://send?phone=+375447268087" target="_blank">WhatsApp</a></li>
+                                        <li id="c_wechat"><a href="weixin://dl/chat?375447268087" target="_blank">WeChat</a></li>
+                                        <li id="c_viber"><a href="viber://chat?number=%2B375447268087" target="_blank">Viber</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -2075,8 +2070,8 @@
                     <div class="w20">
                         <div class="footer-card">
                             <p>
-                                <a href="375172907255">+375 (17) 290-72-55</a>
-                                <a href="375172907255">+375 (17) 290-72-54</a>
+                                <a href="tel:+375172907255">+375 (17) 290-72-55</a>
+                                <a href="tel:+375172907255">+375 (17) 290-72-54</a>
                             </p>
                         </div>
                     </div>
@@ -2120,5 +2115,7 @@
     <script src="js/mp.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/map.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script src="js/fb.js"></script>
     </body>
 </html>
