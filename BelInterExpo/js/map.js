@@ -5,7 +5,9 @@ $(document).ready(function() {
         items: 1,
         touch: false,
         animateOut: "fadeOut",
-        animateIn: "fadeIn"
+        animateIn: "fadeIn",
+        mouseDrag: false,
+        touchDrag: false
     });
     $('.map-navigation').on('click', 'li', function(e) {
         $.each($('#map .map-navigation .owl-dot'), function(i, elem) {
@@ -18,7 +20,7 @@ $(document).ready(function() {
     $('#map .map-1 #Belarussian').on('click', function(){
         $('.map-navigation li:nth-child(2)').trigger('click');
     });
-    $('#map .map-2 #belarus-stands').on('click', function(){
+    $('#map .map-2 #belarus-next').on('click', function(){
         $('.map-navigation li:nth-child(3)').trigger('click');
     });
 
@@ -36,8 +38,14 @@ $(document).ready(function() {
     function highlightSvgSections(category, hightlight) {
         var categorySvgSections = $.grep($svgSections,function(e){ return $(e).attr('category') == category; });
         $.each(categorySvgSections, function(ind, value) {
-            if(hightlight) $(categorySvgSections[ind]).addClass('overlay-active');
-            else $(categorySvgSections[ind]).removeClass('overlay-active');
+            if(hightlight) {
+                $(categorySvgSections[ind]).removeClass('overlay-inactive');
+                $(categorySvgSections[ind]).addClass('overlay-active');
+            }
+            else {
+                $(categorySvgSections[ind]).removeClass('overlay-active');
+                $(categorySvgSections[ind]).addClass('overlay-inactive');
+            }
         });
     }
 
@@ -45,17 +53,22 @@ $(document).ready(function() {
         $.each(array, function(ind, element) {
             $(element).removeClass('overlay-active');
             $(element).removeClass('active');
+            if(!$(element).hasClass('category-select'))
+                $(element).addClass('overlay-inactive');
         });
     }
 
 
     const elem = document.getElementById('panzoom-element');
+    const initialWidth = $(window).width() - 75;
     const zoomInButton = document.getElementById('zoom-in');
     const zoomOutButton = document.getElementById('zoom-out');
     const resetButton = document.getElementById('reset');
     const panzoom = Panzoom(elem, {
         cursor: 'move',
-        startScale: 1.6,
+        maxScale: 4,
+        minScale: 1,
+        initialZoom: 1
         // startX: -10,
         // startY: -74
     });
@@ -63,8 +76,14 @@ $(document).ready(function() {
 // No function bind needed
     parent.addEventListener('wheel', panzoom.zoomWithWheel);
     zoomInButton.addEventListener('click', panzoom.zoomIn)
-    zoomOutButton.addEventListener('click', panzoom.zoomOut)
+    zoomOutButton.addEventListener('click', panzoom.zoomOut);
     resetButton.addEventListener('click', panzoom.reset)
-
-
+    elem.addEventListener('panzoomchange', (event) => {
+        //Доведи до ума Настя!
+        if (event.detail.x > initialWidth) {
+            panzoom.pan(0, event.detail.y, { animate: true })
+        } else if (-initialWidth > event.detail.x) {
+            panzoom.pan(0, event.detail.y, { animate: true })
+        }
+    });
 });

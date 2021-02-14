@@ -61,7 +61,7 @@ $(document).ready(function() {
     })
     /*mobile nav*/
     /*modal companie*/
-        $('.map-wrapper SVG G#overlay PATH').on('click', function(e) {
+        $('.map-wrapper SVG G#overlay RECT, .map-wrapper SVG G#overlay POLYGON').on('click', function(e) {
             e.preventDefault();
             let thisTarget = $(this).attr('id');
             $('#trigger_'+thisTarget).trigger('click');
@@ -75,5 +75,21 @@ $(document).ready(function() {
                     '</div>',
             }
         });
+    /*modal companie*/
+    /*modal companie*/
+    $('.org-item').on('click', function(e) {
+        e.preventDefault();
+        let thisTarget = $(this).attr('data-id');
+        $('#trigger_'+thisTarget).trigger('click');
+    });
+    $('.modal-mp').magnificPopup({
+        type: 'iframe',
+        iframe: {
+            markup: '<div class="mfp-iframe-scaler">'+
+                '<div class="mfp-close-wrap"><div class="mfp-close"></div></div>'+
+                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+                '</div>',
+        }
+    });
     /*modal companie*/
 })
