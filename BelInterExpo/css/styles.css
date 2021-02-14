@@ -420,6 +420,7 @@ MAIN .section#about-us .member-list {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background-color: #eaeaea;
+  margin-top: 18px;
 }
 MAIN .section#about-us .member-list .member {
   -webkit-box-flex: 1;
@@ -1247,11 +1248,11 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     padding-bottom: 24px;
   }
   MAIN .section#events .events-list {
-    margin: 0 -12px;
+    margin: 0 !important;
   }
   MAIN .section#events .events-list .event-wrap {
     margin-bottom: 24px;
-    padding: 0 12px;
+    padding: 0 12px !important;
   }
 }
 @media (max-width: 768px) {
@@ -1524,6 +1525,21 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   }
   FOOTER .form-wrap FORM .form-group INPUT:first-child {
     margin-bottom: 22px;
+  }
+}
+@media (max-width: 420px) {
+  MAIN .section#about-us .member-list .member {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  MAIN .section#about-us .member-list .member .photo {
+    margin-bottom: 12px;
+  }
+  MAIN .section#about-us .member-list .member .info {
+    text-align: center;
   }
 }
 /*Companie*/

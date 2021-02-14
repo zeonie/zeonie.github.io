@@ -363,6 +363,7 @@ MAIN {
         display: flex;
         flex-wrap: wrap;
         background-color: @background-grey;
+        margin-top: 18px;
         .member {
           flex: 1 0  33.333333%;
           max-width: 33.333333%;
@@ -1132,10 +1133,10 @@ FOOTER {
     .section {
       &#events {
         .events-list {
-          margin: 0 -12px;
+          margin: 0 !important;
           .event-wrap {
             margin-bottom: 24px;
-            padding: 0 12px;
+            padding: 0 12px !important;
           }
         }
       }
@@ -1420,6 +1421,18 @@ FOOTER {
         }
       }
     }
+  }
+}
+@media (max-width: 420px) {
+  MAIN .section#about-us .member-list .member {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  MAIN .section#about-us .member-list .member .photo {
+    margin-bottom: 12px;
+  }
+  MAIN .section#about-us .member-list .member .info {
+    text-align: center;
   }
 }
 /*Companie*/

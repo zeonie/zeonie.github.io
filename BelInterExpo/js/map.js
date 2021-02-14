@@ -60,11 +60,15 @@ $(document).ready(function() {
 
 
     const elem = document.getElementById('panzoom-element');
+    const initialWidth = $(window).width() - 75;
     const zoomInButton = document.getElementById('zoom-in');
     const zoomOutButton = document.getElementById('zoom-out');
     const resetButton = document.getElementById('reset');
     const panzoom = Panzoom(elem, {
         cursor: 'move',
+        maxScale: 4,
+        minScale: 1,
+        initialZoom: 1
         // startX: -10,
         // startY: -74
     });
@@ -72,8 +76,14 @@ $(document).ready(function() {
 // No function bind needed
     parent.addEventListener('wheel', panzoom.zoomWithWheel);
     zoomInButton.addEventListener('click', panzoom.zoomIn)
-    zoomOutButton.addEventListener('click', panzoom.zoomOut)
+    zoomOutButton.addEventListener('click', panzoom.zoomOut);
     resetButton.addEventListener('click', panzoom.reset)
-
-
+    elem.addEventListener('panzoomchange', (event) => {
+        //Доведи до ума Настя!
+        if (event.detail.x > initialWidth) {
+            panzoom.pan(0, event.detail.y, { animate: true })
+        } else if (-initialWidth > event.detail.x) {
+            panzoom.pan(0, event.detail.y, { animate: true })
+        }
+    });
 });
