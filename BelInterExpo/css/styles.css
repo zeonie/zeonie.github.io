@@ -1660,6 +1660,9 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   height: 24px;
   margin-right: 4px;
 }
+.companie HEADER .inner._center.h_between .company-info .company-site:hover {
+  color: #3a9e19;
+}
 .companie HEADER .inner._center.h_between .company-info .company-contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1716,34 +1719,6 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   height: 24px;
   margin-right: 4px;
 }
-
-.companie HEADER .place {
-  position: absolute;
-  z-index: 2;
-  font-size: 18px;
-  line-height: 24px;
-  right: 42px;
-  bottom: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #f3f3f3;
-}
-.companie HEADER .place::before {
-  content: "";
-  display: block;
-  background-image: url("../images/icons/placement.svg");
-  background-size: 100% 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
-  margin-right: 4px;
-}
-
 .companie MAIN {
   padding: 0;
 }
@@ -1828,6 +1803,11 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   margin: 0 -12px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+.companie MAIN .container > .member-list .inner._center {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 .companie MAIN .member-list .inner._center {
   -webkit-box-pack: center;
@@ -2017,7 +1997,8 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   MAIN .section#products .tab-contents .tab-content .org-items .org-item:nth-child(4n) {
     border-left: 2px solid #fff;
   }
-  .companie MAIN .product-card .prod-desc P {
+  .companie MAIN .product-card .prod-desc P,
+  .companie MAIN .product-card .prod-desc UL {
     display: none;
   }
 }

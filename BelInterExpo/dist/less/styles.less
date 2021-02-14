@@ -1531,6 +1531,9 @@ FOOTER {
             height: 24px;
             margin-right: 4px;
           }
+          &:hover {
+            color: @active-hover;
+          }
         }
         .company-contacts {
           display: flex;
@@ -1648,6 +1651,9 @@ FOOTER {
         margin: 0 -12px;
         flex-wrap: wrap;
       }
+    }
+    .container > .member-list .inner._center {
+      align-items: stretch;
     }
     .member-list {
       .inner._center {
@@ -1809,7 +1815,7 @@ FOOTER {
   MAIN .section#products .tab-contents .tab-content .org-items .org-item:nth-child(4n) {
     border-left: 2px solid #fff;
   }
-  .companie MAIN .product-card .prod-desc P {
+  .companie MAIN .product-card .prod-desc P, .companie MAIN .product-card .prod-desc UL {
     display: none;
   }
 }
