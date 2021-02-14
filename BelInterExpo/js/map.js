@@ -38,8 +38,14 @@ $(document).ready(function() {
     function highlightSvgSections(category, hightlight) {
         var categorySvgSections = $.grep($svgSections,function(e){ return $(e).attr('category') == category; });
         $.each(categorySvgSections, function(ind, value) {
-            if(hightlight) $(categorySvgSections[ind]).addClass('overlay-active');
-            else $(categorySvgSections[ind]).removeClass('overlay-active');
+            if(hightlight) {
+                $(categorySvgSections[ind]).removeClass('overlay-inactive');
+                $(categorySvgSections[ind]).addClass('overlay-active');
+            }
+            else {
+                $(categorySvgSections[ind]).removeClass('overlay-active');
+                $(categorySvgSections[ind]).addClass('overlay-inactive');
+            }
         });
     }
 
@@ -47,6 +53,8 @@ $(document).ready(function() {
         $.each(array, function(ind, element) {
             $(element).removeClass('overlay-active');
             $(element).removeClass('active');
+            if(!$(element).hasClass('category-select'))
+                $(element).addClass('overlay-inactive');
         });
     }
 
