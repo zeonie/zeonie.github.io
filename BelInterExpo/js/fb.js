@@ -15,12 +15,17 @@ window.fbAsyncInit = function() {
         },
         function (response) {
             let $ = jQuery;
+            if ( $('html').attr('lang') == 'en') {
+                var showLink = 'Show more';
+            } else {
+                var showLink = 'Подробнее';
+            }
             let need_data = response.data;
             for ( let i = 0; i < need_data.length; i++ ) {
                 if ( need_data[i].message.length > 88 ) {
                     need_data[i].message = need_data[i].message.substr(0, 88) + '...';
                 }
-                $('#facebook_list').append(`<div class="event-wrap"><div class="event"><div class="image-wrap" style="background-image: url('${need_data[i].full_picture}');"></div><div class="event-text"><p>${need_data[i].message}</p></div><a href="${need_data[i].permalink_url}" target="_blank" class="arrow-right">Read more</a></div></div>`);
+                $('#facebook_list').append(`<div class="event-wrap"><div class="event"><div class="image-wrap" style="background-image: url('${need_data[i].full_picture}');"></div><div class="event-text"><p>${need_data[i].message}</p></div><a href="${need_data[i].permalink_url}" target="_blank" class="arrow-right">${showLink}</a></div></div>`);
             }
         }
     );
