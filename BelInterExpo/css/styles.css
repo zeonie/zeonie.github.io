@@ -1688,7 +1688,8 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   max-height: 24px;
   margin-right: 8px;
 }
-.companie HEADER .yr-link {
+.companie HEADER .yr-link,
+.companie HEADER .place {
   position: absolute;
   z-index: 2;
   font-size: 18px;
@@ -1703,7 +1704,8 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   align-items: center;
   color: #f3f3f3;
 }
-.companie HEADER .yr-link::before {
+.companie HEADER .yr-link::before,
+.companie HEADER .place::before {
   content: "";
   display: block;
   background-image: url("../images/icons/youtube.svg");
