@@ -20,7 +20,7 @@ $(document).ready(function() {
     $('#map .map-1 #Belarussian').on('click', function(){
         $('.map-navigation li:nth-child(2)').trigger('click');
     });
-    $('#map .map-2 #belarus-next').on('click', function(){
+    $('#map .map-2 #belarus-stands image').on('click', function(){
         $('.map-navigation li:nth-child(3)').trigger('click');
     });
 
@@ -61,6 +61,7 @@ $(document).ready(function() {
 
     const elem = document.getElementById('panzoom-element');
     const initialWidth = $(window).width() - 75;
+
     const zoomInButton = document.getElementById('zoom-in');
     const zoomOutButton = document.getElementById('zoom-out');
     const resetButton = document.getElementById('reset');
@@ -69,8 +70,6 @@ $(document).ready(function() {
         maxScale: 4,
         minScale: 1,
         initialZoom: 1
-        // startX: -10,
-        // startY: -74
     });
     const parent = elem.parentElement
 // No function bind needed
@@ -79,7 +78,6 @@ $(document).ready(function() {
     zoomOutButton.addEventListener('click', panzoom.zoomOut);
     resetButton.addEventListener('click', panzoom.reset)
     elem.addEventListener('panzoomchange', (event) => {
-        //Доведи до ума Настя!
         if (event.detail.x > initialWidth) {
             panzoom.pan(0, event.detail.y, { animate: true })
         } else if (-initialWidth > event.detail.x) {
