@@ -20,7 +20,7 @@ $(document).ready(function() {
     $('#map .map-1 #Belarussian').on('click', function(){
         $('.map-navigation li:nth-child(2)').trigger('click');
     });
-    $('#map .map-2 #belarus-next').on('click', function(){
+    $('#map .map-2 #belarus-stands image').on('click', function(){
         $('.map-navigation li:nth-child(3)').trigger('click');
     });
 
@@ -65,8 +65,8 @@ $(document).ready(function() {
     const resetButton = document.getElementById('reset');
     const panzoom = Panzoom(elem, {
         cursor: 'move',
-        // startX: -10,
-        // startY: -74
+        maxScale: 2.8,
+        minScale: 1
     });
     const parent = elem.parentElement
 // No function bind needed
