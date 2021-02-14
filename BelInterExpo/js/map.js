@@ -60,20 +60,28 @@ $(document).ready(function() {
 
 
     const elem = document.getElementById('panzoom-element');
+    const initialWidth = $(window).width() - 75;
+
     const zoomInButton = document.getElementById('zoom-in');
     const zoomOutButton = document.getElementById('zoom-out');
     const resetButton = document.getElementById('reset');
     const panzoom = Panzoom(elem, {
         cursor: 'move',
-        maxScale: 2.8,
-        minScale: 1
+        maxScale: 4,
+        minScale: 1,
+        initialZoom: 1
     });
     const parent = elem.parentElement
 // No function bind needed
     parent.addEventListener('wheel', panzoom.zoomWithWheel);
     zoomInButton.addEventListener('click', panzoom.zoomIn)
-    zoomOutButton.addEventListener('click', panzoom.zoomOut)
+    zoomOutButton.addEventListener('click', panzoom.zoomOut);
     resetButton.addEventListener('click', panzoom.reset)
-
-
+    elem.addEventListener('panzoomchange', (event) => {
+        if (event.detail.x > initialWidth) {
+            panzoom.pan(0, event.detail.y, { animate: true })
+        } else if (-initialWidth > event.detail.x) {
+            panzoom.pan(0, event.detail.y, { animate: true })
+        }
+    });
 });

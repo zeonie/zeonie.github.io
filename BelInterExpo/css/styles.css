@@ -156,6 +156,12 @@ IMG {
   flex: 1 0 80%;
   max-width: 80%;
 }
+.w100 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  max-width: 100%;
+}
 .background-grey {
   background-color: #eaeaea;
 }
@@ -414,6 +420,7 @@ MAIN .section#about-us .member-list {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background-color: #eaeaea;
+  margin-top: 18px;
 }
 MAIN .section#about-us .member-list .member {
   -webkit-box-flex: 1;
@@ -739,32 +746,38 @@ MAIN .section#events .events-list {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0 -15px;
 }
 MAIN .section#events .events-list .event-wrap {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 25%;
   flex: 1 0 25%;
   max-width: 25%;
-  padding: 0 15px;
+  padding-left: 15px;
+}
+MAIN .section#events .events-list .event-wrap:first-child {
+  padding-left: 0;
 }
 MAIN .section#events .events-list .event-wrap .event {
   background-color: #eaeaea;
   position: relative;
   height: 100%;
 }
-MAIN .section#events .events-list .event-wrap .event .image-wrap IMG {
+MAIN .section#events .events-list .event-wrap .event .image-wrap {
   width: 100%;
-  height: auto;
+  height: 280px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 MAIN .section#events .events-list .event-wrap .event .event-text {
-  padding: 30px 22px 80px 22px;
+  padding: 14px 14px 42px;
 }
 MAIN .section#events .events-list .event-wrap .event .event-text P {
   font-size: 18px;
-  line-height: 21px;
+  line-height: 22px;
   color: #101010;
-  font-weight: 600;
+  font-weight: 400;
+  margin-bottom: 0;
 }
 MAIN .section#events .events-list .event-wrap .event A.arrow-right {
   position: absolute;
@@ -774,11 +787,11 @@ MAIN .section#events .events-list .event-wrap .event A.arrow-right {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  left: 22px;
+  left: 14px;
   font-size: 14px;
   line-height: 16px;
   color: #898989;
-  bottom: 20px;
+  bottom: 12px;
   font-style: italic;
   font-weight: 400;
 }
@@ -795,6 +808,15 @@ MAIN .section#events .events-list .event-wrap .event A.arrow-right::after {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
+}
+MAIN .section#events .text-center {
+  margin-top: 22px;
+}
+MAIN .section#events .text-center P {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 22px;
 }
 FOOTER {
   background-image: url(../images/footer.jpg);
@@ -941,6 +963,13 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     max-width: 991px;
     padding: 0 12px;
   }
+  .container._full {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+  MAIN .section#events .events-list .event-wrap .event .image-wrap {
+    height: 200px;
+  }
 }
 @media (max-width: 1024px) {
   .container {
@@ -965,12 +994,16 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   HEADER #nav .nav-items A {
     padding: 0.5em 0;
   }
+  MAIN .section#events .events-list {
+    margin: 0 -12px;
+  }
   MAIN .section#events .events-list .event-wrap {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 50%;
     flex: 1 0 50%;
     max-width: 50%;
     margin-bottom: 30px;
+    padding: 0 12px !important;
   }
   MAIN .sectiondocs .docs-info {
     padding-right: 14px;
@@ -1215,11 +1248,11 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     padding-bottom: 24px;
   }
   MAIN .section#events .events-list {
-    margin: 0 -12px;
+    margin: 0 !important;
   }
   MAIN .section#events .events-list .event-wrap {
     margin-bottom: 24px;
-    padding: 0 12px;
+    padding: 0 12px !important;
   }
 }
 @media (max-width: 768px) {
@@ -1494,6 +1527,21 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     margin-bottom: 22px;
   }
 }
+@media (max-width: 420px) {
+  MAIN .section#about-us .member-list .member {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  MAIN .section#about-us .member-list .member .photo {
+    margin-bottom: 12px;
+  }
+  MAIN .section#about-us .member-list .member .info {
+    text-align: center;
+  }
+}
 /*Companie*/
 .mfp-iframe-holder {
   padding-top: 0;
@@ -1612,6 +1660,9 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   height: 24px;
   margin-right: 4px;
 }
+.companie HEADER .inner._center.h_between .company-info .company-site:hover {
+  color: #3a9e19;
+}
 .companie HEADER .inner._center.h_between .company-info .company-contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1633,14 +1684,18 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   -ms-flex-align: center;
   align-items: center;
   margin-right: 16px;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.companie HEADER .inner._center.h_between .company-info .company-contacts LI:last-child {
+  margin-right: 0;
 }
 .companie HEADER .inner._center.h_between .company-info .company-contacts LI IMG {
   max-height: 24px;
   margin-right: 8px;
 }
-.companie HEADER .yr-link {
+.companie HEADER .yr-link,
+.companie HEADER .place {
   position: absolute;
   z-index: 2;
   font-size: 18px;
@@ -1655,7 +1710,8 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   align-items: center;
   color: #f3f3f3;
 }
-.companie HEADER .yr-link::before {
+.companie HEADER .yr-link::before,
+.companie HEADER .place::before {
   content: "";
   display: block;
   background-image: url("../images/icons/youtube.svg");
@@ -1678,6 +1734,9 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
 .companie MAIN .video-wrap .video IFRAME {
   width: 100%;
   border: 0;
+}
+.companie MAIN .info-wrap UL {
+  list-style: disc;
 }
 .companie MAIN .info-wrap UL LI {
   line-height: 1.2em;
@@ -1747,6 +1806,14 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   margin: 0 -12px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.companie MAIN .container > .member-list .inner._center {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 .companie MAIN .member-list .inner._center {
   -webkit-box-pack: center;
@@ -1845,8 +1912,10 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   align-items: center;
 }
 .companie MAIN .stand-wrap .member-list .member .photo {
-  width: 110px;
-  height: 110px;
+  min-width: 110px;
+  min-height: 110px;
+  max-width: 110px;
+  max-height: 110px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1857,8 +1926,11 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border-radius: 50%;
   margin-right: 22px;
+}
+.companie MAIN .stand-wrap .member-list .member .photo IMG {
+  height: 100%;
+  width: auto;
 }
 .companie MAIN .stand-wrap .member-list .member .info * {
   margin: 0;
@@ -1930,6 +2002,10 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   }
   MAIN .section#products .tab-contents .tab-content .org-items .org-item:nth-child(4n) {
     border-left: 2px solid #fff;
+  }
+  .companie MAIN .product-card .prod-desc P,
+  .companie MAIN .product-card .prod-desc UL {
+    display: none;
   }
 }
 @media (max-width: 991px) {

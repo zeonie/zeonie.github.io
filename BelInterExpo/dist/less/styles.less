@@ -139,6 +139,9 @@ IMG {
 .w80 {
   .w(80%);
 }
+.w100 {
+  .w(100%);
+}
 .background-grey {
   background-color: @background-grey;
 }
@@ -360,6 +363,7 @@ MAIN {
         display: flex;
         flex-wrap: wrap;
         background-color: @background-grey;
+        margin-top: 18px;
         .member {
           flex: 1 0  33.333333%;
           max-width: 33.333333%;
@@ -648,39 +652,43 @@ MAIN {
       .events-list {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -15px;
         .event-wrap {
           flex: 1 0 25%;
           max-width: 25%;
-          padding: 0 15px;
+          padding-left: 15px;
+          &:first-child {
+            padding-left: 0;
+          }
           .event {
             background-color: @background-grey;
             position: relative;
             height: 100%;
             .image-wrap {
-              IMG {
-                width: 100%;
-                height: auto;
-              }
+              width: 100%;
+              height: 280px;
+              background-size: cover;
+              background-position: center center;
+              background-repeat: no-repeat;
             }
             .event-text {
-              padding: 30px 22px 80px 22px;
+              padding: 14px 14px 42px;
               P {
                 font-size: 18px;
-                line-height: 21px;
+                line-height: 22px;
                 color: @headers-color;
-                font-weight: 600;
+                font-weight: 400;
+                margin-bottom: 0;
               }
             }
             A.arrow-right {
               position: absolute;
               display: flex;
               align-items: center;
-              left: 22px;
+              left: 14px;
               font-size: 14px;
               line-height: 16px;
               color: #898989;
-              bottom: 20px;
+              bottom: 12px;
               font-style: italic;
               font-weight: 400;
               &:hover {
@@ -699,6 +707,15 @@ MAIN {
               }
             }
           }
+        }
+      }
+      .text-center {
+        margin-top: 22px;
+        P {
+          margin-bottom: 0;
+          text-align: center;
+          font-size: 18px;
+          line-height: 22px;
         }
       }
     }
@@ -839,6 +856,13 @@ FOOTER {
   .container {
     max-width: 991px;
     padding: 0 12px;
+    &._full {
+      max-width: 100%;
+      padding: 0 12px;
+    }
+  }
+  MAIN .section#events .events-list .event-wrap .event .image-wrap {
+    height: 200px;
   }
 }
 @media (max-width: 1024px) {
@@ -874,10 +898,12 @@ FOOTER {
     .section {
       &#events {
         .events-list {
+          margin: 0 -12px;
           .event-wrap {
             flex: 1 0 50%;
             max-width: 50%;
             margin-bottom: 30px;
+            padding: 0 12px !important;
           }
         }
       }
@@ -1107,10 +1133,10 @@ FOOTER {
     .section {
       &#events {
         .events-list {
-          margin: 0 -12px;
+          margin: 0 !important;
           .event-wrap {
             margin-bottom: 24px;
-            padding: 0 12px;
+            padding: 0 12px !important;
           }
         }
       }
@@ -1397,6 +1423,18 @@ FOOTER {
     }
   }
 }
+@media (max-width: 420px) {
+  MAIN .section#about-us .member-list .member {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  MAIN .section#about-us .member-list .member .photo {
+    margin-bottom: 12px;
+  }
+  MAIN .section#about-us .member-list .member .info {
+    text-align: center;
+  }
+}
 /*Companie*/
 .mfp-iframe-holder {
   padding-top: 0;
@@ -1493,6 +1531,9 @@ FOOTER {
             height: 24px;
             margin-right: 4px;
           }
+          &:hover {
+            color: @active-hover;
+          }
         }
         .company-contacts {
           display: flex;
@@ -1504,8 +1545,11 @@ FOOTER {
             display: flex;
             align-items: center;
             margin-right: 16px;
-            font-size: 18px;
-            line-height: 22px;
+            font-size: 16px;
+            line-height: 20px;
+            &:last-child {
+              margin-right: 0;
+            }
             IMG {
               max-height: 24px;
               margin-right: 8px;
@@ -1514,7 +1558,7 @@ FOOTER {
         }
       }
     }
-    .yr-link {
+    .yr-link, .place {
       position: absolute;
       z-index: 2;
       font-size: 18px;
@@ -1553,6 +1597,7 @@ FOOTER {
     }
     .info-wrap {
       UL {
+        list-style: disc;
         LI {
           line-height: 1.2em;
           margin-bottom: 12px;
@@ -1608,7 +1653,11 @@ FOOTER {
       .inner._normal {
         margin: 0 -12px;
         flex-wrap: wrap;
+        justify-content: center;
       }
+    }
+    .container > .member-list .inner._center {
+      align-items: stretch;
     }
     .member-list {
       .inner._center {
@@ -1621,7 +1670,7 @@ FOOTER {
           align-items: center;
           flex-direction: column;
           .member-photo {
-            max-width: 225px;
+            max-wi  dth: 225px;
             margin-bottom: 24px;
           }
           .member-name {
@@ -1686,14 +1735,19 @@ FOOTER {
           display: flex;
           align-items: center;
           .photo {
-            width: 110px;
-            height: 110px;
+            min-width: 110px;
+            min-height: 110px;
+            max-width: 110px;
+            max-height: 110px;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
             margin-right: 22px;
+            IMG {
+              height: 100%;
+              width: auto;
+            }
           }
           .info {
             * {
@@ -1764,6 +1818,9 @@ FOOTER {
   }
   MAIN .section#products .tab-contents .tab-content .org-items .org-item:nth-child(4n) {
     border-left: 2px solid #fff;
+  }
+  .companie MAIN .product-card .prod-desc P, .companie MAIN .product-card .prod-desc UL {
+    display: none;
   }
 }
 @media (max-width: 991px) {
