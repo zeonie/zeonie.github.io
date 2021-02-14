@@ -1684,8 +1684,11 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   -ms-flex-align: center;
   align-items: center;
   margin-right: 16px;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.companie HEADER .inner._center.h_between .company-info .company-contacts LI:last-child {
+  margin-right: 0;
 }
 .companie HEADER .inner._center.h_between .company-info .company-contacts LI IMG {
   max-height: 24px;
@@ -1803,6 +1806,9 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   margin: 0 -12px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .companie MAIN .container > .member-list .inner._center {
   -webkit-box-align: stretch;

@@ -1545,8 +1545,11 @@ FOOTER {
             display: flex;
             align-items: center;
             margin-right: 16px;
-            font-size: 18px;
-            line-height: 22px;
+            font-size: 16px;
+            line-height: 20px;
+            &:last-child {
+              margin-right: 0;
+            }
             IMG {
               max-height: 24px;
               margin-right: 8px;
@@ -1650,6 +1653,7 @@ FOOTER {
       .inner._normal {
         margin: 0 -12px;
         flex-wrap: wrap;
+        justify-content: center;
       }
     }
     .container > .member-list .inner._center {
