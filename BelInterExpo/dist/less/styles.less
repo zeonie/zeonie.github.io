@@ -139,6 +139,9 @@ IMG {
 .w80 {
   .w(80%);
 }
+.w100 {
+  .w(100%);
+}
 .background-grey {
   background-color: @background-grey;
 }
@@ -648,39 +651,43 @@ MAIN {
       .events-list {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -15px;
         .event-wrap {
           flex: 1 0 25%;
           max-width: 25%;
-          padding: 0 15px;
+          padding-left: 15px;
+          &:first-child {
+            padding-left: 0;
+          }
           .event {
             background-color: @background-grey;
             position: relative;
             height: 100%;
             .image-wrap {
-              IMG {
-                width: 100%;
-                height: auto;
-              }
+              width: 100%;
+              height: 280px;
+              background-size: cover;
+              background-position: center center;
+              background-repeat: no-repeat;
             }
             .event-text {
-              padding: 30px 22px 80px 22px;
+              padding: 14px 14px 42px;
               P {
                 font-size: 18px;
-                line-height: 21px;
+                line-height: 22px;
                 color: @headers-color;
-                font-weight: 600;
+                font-weight: 400;
+                margin-bottom: 0;
               }
             }
             A.arrow-right {
               position: absolute;
               display: flex;
               align-items: center;
-              left: 22px;
+              left: 14px;
               font-size: 14px;
               line-height: 16px;
               color: #898989;
-              bottom: 20px;
+              bottom: 12px;
               font-style: italic;
               font-weight: 400;
               &:hover {
@@ -699,6 +706,15 @@ MAIN {
               }
             }
           }
+        }
+      }
+      .text-center {
+        margin-top: 22px;
+        P {
+          margin-bottom: 0;
+          text-align: center;
+          font-size: 18px;
+          line-height: 22px;
         }
       }
     }
@@ -839,6 +855,13 @@ FOOTER {
   .container {
     max-width: 991px;
     padding: 0 12px;
+    &._full {
+      max-width: 100%;
+      padding: 0 12px;
+    }
+  }
+  MAIN .section#events .events-list .event-wrap .event .image-wrap {
+    height: 200px;
   }
 }
 @media (max-width: 1024px) {
@@ -874,10 +897,12 @@ FOOTER {
     .section {
       &#events {
         .events-list {
+          margin: 0 -12px;
           .event-wrap {
             flex: 1 0 50%;
             max-width: 50%;
             margin-bottom: 30px;
+            padding: 0 12px !important;
           }
         }
       }
@@ -1553,6 +1578,7 @@ FOOTER {
     }
     .info-wrap {
       UL {
+        list-style: disc;
         LI {
           line-height: 1.2em;
           margin-bottom: 12px;
@@ -1621,7 +1647,7 @@ FOOTER {
           align-items: center;
           flex-direction: column;
           .member-photo {
-            max-width: 225px;
+            max-wi  dth: 225px;
             margin-bottom: 24px;
           }
           .member-name {
@@ -1686,14 +1712,19 @@ FOOTER {
           display: flex;
           align-items: center;
           .photo {
-            width: 110px;
-            height: 110px;
+            min-width: 110px;
+            min-height: 110px;
+            max-width: 110px;
+            max-height: 110px;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
             margin-right: 22px;
+            IMG {
+              height: 100%;
+              width: auto;
+            }
           }
           .info {
             * {
@@ -1764,6 +1795,9 @@ FOOTER {
   }
   MAIN .section#products .tab-contents .tab-content .org-items .org-item:nth-child(4n) {
     border-left: 2px solid #fff;
+  }
+  .companie MAIN .product-card .prod-desc P {
+    display: none;
   }
 }
 @media (max-width: 991px) {
