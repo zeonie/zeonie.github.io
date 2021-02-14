@@ -1783,6 +1783,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
 }
 .companie MAIN .product-card .product-name H4 {
   margin-bottom: 0;
+  word-break: break-word;
 }
 .companie MAIN .product-card .prod-desc {
   padding: 0 12px 44px;
