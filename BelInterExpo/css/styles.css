@@ -351,7 +351,7 @@ MAIN .section .section-title {
   margin-bottom: 0;
 }
 MAIN .section .section-content {
-  margin-top: 52px;
+  margin-top: 38px;
 }
 MAIN .section .sub-title {
   margin-bottom: 22px;
@@ -361,6 +361,7 @@ MAIN .section#gulfood .about-card-text {
 }
 MAIN .section#gulfood .about-card-text P {
   margin-bottom: 2em;
+  font-size: 18px;
 }
 MAIN .section#gulfood .about-card-video {
   position: relative;
@@ -372,19 +373,19 @@ MAIN .section#gulfood .about-card-video > IFRAME {
   width: 100%;
   height: 100%;
 }
-MAIN .section#gulfood .text-center {
+MAIN .section#about-us .text-center {
   text-align: center;
-  margin-top: 105px;
+  /*margin-top: 105px;*/
 }
-MAIN .section#gulfood .text-center > P {
+MAIN .section#about-us .text-center > P {
   margin-bottom: 0;
   font-size: 24px;
   line-height: 28px;
 }
-MAIN .section#gulfood .carousel-wrap {
+MAIN .section#about-us .carousel-wrap {
   margin-top: 62px;
 }
-MAIN .section#gulfood .carousel-wrap .owl-dots {
+MAIN .section#about-us .carousel-wrap .owl-dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,7 +394,7 @@ MAIN .section#gulfood .carousel-wrap .owl-dots {
   justify-content: center;
   margin-top: 1.5em;
 }
-MAIN .section#gulfood .carousel-wrap .owl-dots > .owl-dot {
+MAIN .section#about-us .carousel-wrap .owl-dots > .owl-dot {
   display: block;
   width: 14px;
   height: 14px;
@@ -405,16 +406,16 @@ MAIN .section#gulfood .carousel-wrap .owl-dots > .owl-dot {
   border-radius: 50%;
   margin-right: 14px;
 }
-MAIN .section#gulfood .carousel-wrap .owl-dots > .owl-dot:last-child {
+MAIN .section#about-us .carousel-wrap .owl-dots > .owl-dot:last-child {
   margin-right: 0;
 }
-MAIN .section#gulfood .carousel-wrap .owl-dots > .owl-dot:hover {
+MAIN .section#about-us .carousel-wrap .owl-dots > .owl-dot:hover {
   background-color: #3a9e19;
 }
-MAIN .section#gulfood .carousel-wrap .owl-dots > .owl-dot.active {
+MAIN .section#about-us .carousel-wrap .owl-dots > .owl-dot.active {
   background-color: #4aca20;
 }
-MAIN .section#gulfood .member-list {
+MAIN .section#about-us .member-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,8 +423,9 @@ MAIN .section#gulfood .member-list {
   flex-wrap: wrap;
   background-color: #eaeaea;
   margin-top: 18px;
+  margin-bottom: 32px;
 }
-MAIN .section#gulfood .member-list .member {
+MAIN .section#about-us .member-list .member {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 33.333333%;
   flex: 1 0 33.333333%;
@@ -437,7 +439,7 @@ MAIN .section#gulfood .member-list .member {
   -ms-flex-align: center;
   align-items: center;
 }
-MAIN .section#gulfood .member-list .member .photo {
+MAIN .section#about-us .member-list .member .photo {
   min-width: 125px;
   height: 220px;
   overflow: hidden;
@@ -452,23 +454,24 @@ MAIN .section#gulfood .member-list .member .photo {
   justify-content: center;
   margin-right: 14px;
 }
-MAIN .section#gulfood .member-list .member .photo IMG {
+MAIN .section#about-us .member-list .member .photo IMG {
   width: auto;
   max-width: unset;
   height: 100%;
   display: block;
 }
-MAIN .section#gulfood .member-list .member .info * {
+MAIN .section#about-us .member-list .member .info * {
   margin: 0;
+  font-size: 18px;
 }
-MAIN .section#gulfood .member-list .member .info > DIV {
+MAIN .section#about-us .member-list .member .info > DIV {
   margin-bottom: 4px;
 }
-MAIN .section#gulfood .member-list .member .info A {
+MAIN .section#about-us .member-list .member .info A {
   color: #3a3a3a;
   font-weight: 400;
 }
-MAIN .section#gulfood .member-list .member .info A:hover {
+MAIN .section#about-us .member-list .member .info A:hover {
   color: #3a9e19;
 }
 MAIN .section#products .inner {
@@ -535,6 +538,17 @@ MAIN .section#products .tab-items .tab-item > A .tab-title {
   display: block !important;
   margin: 0 0 0 14px;
 }
+
+MAIN .section#products .help-text {
+  margin-top:10px;
+  font-style: italic;
+  font-weight: 100;
+  color: #3a3a3a;
+  display: block;
+  text-align:center;
+  font-size:18px;
+}
+
 MAIN .section#products .tab-items .tab-item > A .tab-decscription {
   font-style: italic;
   font-weight: 100;
@@ -575,6 +589,7 @@ MAIN .section#products .tab-contents .tab-content {
 }
 MAIN .section#products .tab-contents .tab-content * {
   color: #fff;
+  font-size: 18px;
 }
 MAIN .section#products .tab-contents .tab-content._is-active {
   display: block;
@@ -628,7 +643,7 @@ MAIN .section#products .tab-contents .tab-content .org-items .org-item IMG {
 }
 MAIN .section#products .tab-contents .tab-content .org-items .org-item SPAN {
   color: #fff;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 18px;
 }
 MAIN .section#products .tab-contents .tab-content .org-items .org-item:hover {
@@ -917,10 +932,10 @@ FOOTER .main-footer .text-wrap P > A:hover {
 }
 FOOTER .main-footer .footer-additional {
   position: absolute;
-  bottom: 32px;
-  max-width: 320px;
+  bottom: 26px;
+  max-width: 360px;
   background-color: #4aca20;
-  padding: 28px 22px;
+  padding: 22px 22px;
 }
 FOOTER .main-footer .footer-additional .footer-additional-wrap {
   color: #fff;
@@ -943,7 +958,7 @@ FOOTER .main-footer .footer-additional .footer-additional-wrap A.btn {
   color: #fff;
   font-size: 18px;
   line-height: 21px;
-  margin-top: 32px;
+  margin-top: 24px;
 }
 FOOTER .main-footer .footer-additional .footer-additional-wrap A.btn::after {
   content: "";
@@ -1094,10 +1109,10 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     line-height: 1.2em;
   }
   MAIN .section#products .tab-contents .tab-content .org-items .org-item SPAN {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 18px;
   }
-  MAIN .section#gulfood .member-list .member {
+  MAIN .section#about-us .member-list .member {
     -webkit-box-flex: 1;
     -ms-flex: 1 0  50%;
     flex: 1 0  50%;
@@ -1111,7 +1126,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     -ms-flex-align: center;
     align-items: center;
   }
-  MAIN .section#gulfood .member-list .member .photo {
+  MAIN .section#about-us .member-list .member .photo {
     min-width: 125px;
     height: 220px;
     overflow: hidden;
@@ -1126,23 +1141,23 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     justify-content: center;
     margin-right: 14px;
   }
-  MAIN .section#gulfood .member-list .member .photo IMG {
+  MAIN .section#about-us .member-list .member .photo IMG {
     width: auto;
     max-width: unset;
     height: 100%;
     display: block;
   }
-  MAIN .section#gulfood .member-list .member .info * {
+  MAIN .section#about-us .member-list .member .info * {
     margin: 0;
   }
-  MAIN .section#gulfood .member-list .member .info > DIV {
+  MAIN .section#about-us .member-list .member .info > DIV {
     margin-bottom: 4px;
   }
-  MAIN .section#gulfood .member-list .member .info A {
+  MAIN .section#about-us .member-list .member .info A {
     color: #3a3a3a;
     font-weight: 400;
   }
-  MAIN .section#gulfood .member-list .member .info A:hover {
+  MAIN .section#about-us .member-list .member .info A:hover {
     color: #3a9e19;
   }
   FOOTER .main-footer {
@@ -1450,7 +1465,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     max-width: 54px;
   }
   MAIN .section#products .tab-contents .tab-content .org-items .org-item SPAN {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 20px;
   }
 }
@@ -1483,7 +1498,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     width: 70%;
     padding-left: 12px;
   }
-  MAIN .section#gulfood .member-list .member {
+  MAIN .section#about-us .member-list .member {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 100%;
     flex: 1 0 100%;
@@ -1497,7 +1512,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     -ms-flex-align: center;
     align-items: center;
   }
-  MAIN .section#gulfood .member-list .member .photo {
+  MAIN .section#about-us .member-list .member .photo {
     max-width: 100px;
     height: 100px;
     overflow: hidden;
@@ -1512,24 +1527,24 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     justify-content: center;
     margin-right: 7px;
   }
-  MAIN .section#gulfood .member-list .member .photo IMG {
+  MAIN .section#about-us .member-list .member .photo IMG {
     width: 100%;
     max-width: unset;
     height: auto;
     display: block;
   }
-  MAIN .section#gulfood .member-list .member .info * {
+  MAIN .section#about-us .member-list .member .info * {
     margin: 0;
   }
-  MAIN .section#gulfood .member-list .member .info > DIV {
+  MAIN .section#about-us .member-list .member .info > DIV {
     margin-bottom: 4px;
     font-size: 13px;
   }
-  MAIN .section#gulfood .member-list .member .info A {
+  MAIN .section#about-us .member-list .member .info A {
     color: #3a3a3a;
     font-weight: 400;
   }
-  MAIN .section#gulfood .member-list .member .info A:hover {
+  MAIN .section#about-us .member-list .member .info A:hover {
     color: #3a9e19;
   }
 }
@@ -1610,17 +1625,17 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   }
 }
 @media (max-width: 420px) {
-  MAIN .section#gulfood .member-list .member {
+  MAIN .section#about-us .member-list .member {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
   }
-  MAIN .section#gulfood .member-list .member .photo {
+  MAIN .section#about-us .member-list .member .photo {
     margin-bottom: 12px;
   }
-  MAIN .section#gulfood .member-list .member .info {
+  MAIN .section#about-us .member-list .member .info {
     text-align: center;
   }
 }
@@ -1792,11 +1807,22 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   align-items: center;
   color: #f3f3f3;
 }
-.companie HEADER .yr-link::before,
-.companie HEADER .place::before {
+.companie HEADER .yr-link::before {
   content: "";
   display: block;
   background-image: url("../images/icons/youtube.svg");
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+
+.companie HEADER .place::before {
+  content: "";
+  display: block;
+  background-image: url("../images/icons/placement.svg");
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
