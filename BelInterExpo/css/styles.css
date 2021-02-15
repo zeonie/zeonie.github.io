@@ -351,7 +351,7 @@ MAIN .section .section-title {
   margin-bottom: 0;
 }
 MAIN .section .section-content {
-  margin-top: 52px;
+  margin-top: 38px;
 }
 MAIN .section .sub-title {
   margin-bottom: 22px;
@@ -552,6 +552,15 @@ MAIN .section#products .tab-items .tab-item > A .tab-title {
   color: #101010;
   display: block !important;
   margin: 0 0 0 14px;
+}
+MAIN .section#products .help-text {
+  margin-top:10px;
+  font-style: italic;
+  font-weight: 100;
+  color: #3a3a3a;
+  display: block;
+  text-align:center;
+  font-size:18px;
 }
 MAIN .section#products .tab-items .tab-item > A .tab-decscription {
   font-style: italic;
@@ -936,10 +945,10 @@ FOOTER .main-footer .text-wrap P > A:hover {
 }
 FOOTER .main-footer .footer-additional {
   position: absolute;
-  bottom: 32px;
-  max-width: 320px;
+  bottom: 26px;
+  max-width: 360px;
   background-color: #4aca20;
-  padding: 28px 22px;
+  padding: 22px 22px;
 }
 FOOTER .main-footer .footer-additional .footer-additional-wrap {
   color: #fff;
@@ -962,7 +971,7 @@ FOOTER .main-footer .footer-additional .footer-additional-wrap A.btn {
   color: #fff;
   font-size: 18px;
   line-height: 21px;
-  margin-top: 32px;
+  margin-top: 24px;
 }
 FOOTER .main-footer .footer-additional .footer-additional-wrap A.btn::after {
   content: "";
