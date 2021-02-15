@@ -690,6 +690,14 @@ MAIN .section#docs .docs-cards .docs-card > A::before {
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
+MAIN .section#organization .inner._center {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 MAIN .section#organization .member {
   text-align: center;
   background-color: #eaeaea;
@@ -720,9 +728,71 @@ MAIN .section#organization .member .member-name {
 MAIN .section#organization .member .member-contacts UL {
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 MAIN .section#organization .member .member-contacts UL LI {
   margin-bottom: 0.5em;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  max-width: 100%;
+}
+MAIN .section#organization .member .member-contacts UL LI#c_tg,
+MAIN .section#organization .member .member-contacts UL LI#c_wapp,
+MAIN .section#organization .member .member-contacts UL LI#c_wechat,
+MAIN .section#organization .member .member-contacts UL LI#c_viber {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 32px;
+  flex: 1 0 32px;
+  max-width: 32px;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+MAIN .section#organization .member .member-contacts UL LI#c_tg A,
+MAIN .section#organization .member .member-contacts UL LI#c_wapp A,
+MAIN .section#organization .member .member-contacts UL LI#c_wechat A,
+MAIN .section#organization .member .member-contacts UL LI#c_viber A {
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+MAIN .section#organization .member .member-contacts UL LI#c_tg A:before,
+MAIN .section#organization .member .member-contacts UL LI#c_wapp A:before,
+MAIN .section#organization .member .member-contacts UL LI#c_wechat A:before,
+MAIN .section#organization .member .member-contacts UL LI#c_viber A:before {
+  content: "";
+  display: block;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+}
+MAIN .section#organization .member .member-contacts UL LI#c_tg A::before {
+  background-image: url("../images/icons/telegram.svg");
+}
+MAIN .section#organization .member .member-contacts UL LI#c_wapp A::before {
+  background-image: url("../images/icons/whatsapp.svg");
+}
+MAIN .section#organization .member .member-contacts UL LI#c_wechat A::before {
+  background-image: url("../images/icons/wechat.svg");
+}
+MAIN .section#organization .member .member-contacts UL LI#c_viber A::before {
+  background-image: url("../images/icons/viber.svg");
 }
 MAIN .section#organization .member .member-contacts UL LI:last-child {
   margin-bottom: 0;
@@ -1854,9 +1924,21 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
 .companie MAIN .member-list .inner._center .member .member-contacts UL {
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .companie MAIN .member-list .inner._center .member .member-contacts UL LI {
   margin-bottom: 0.5em;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  max-width: 100%;
 }
 .companie MAIN .member-list .inner._center .member .member-contacts UL LI#job {
   -webkit-box-flex: 1;
@@ -1869,6 +1951,56 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   pointer-events: none;
   font-size: 16px;
   font-weight: 600;
+}
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_tg,
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_wapp,
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_wechat,
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_viber {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 32px;
+  flex: 1 0 32px;
+  max-width: 32px;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_tg A,
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_wapp A,
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_wechat A,
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_viber A {
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_tg A:before,
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_wapp A:before,
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_wechat A:before,
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_viber A:before {
+  content: "";
+  display: block;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+}
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_tg A::before {
+  background-image: url("../images/icons/telegram.svg");
+}
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_wapp A::before {
+  background-image: url("../images/icons/whatsapp.svg");
+}
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_wechat A::before {
+  background-image: url("../images/icons/wechat.svg");
+}
+.companie MAIN .member-list .inner._center .member .member-contacts UL LI#c_viber A::before {
+  background-image: url("../images/icons/viber.svg");
 }
 .companie MAIN .member-list .inner._center .member .member-contacts UL LI:last-child {
   margin-bottom: 0;
@@ -1933,11 +2065,75 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   height: 100%;
   width: auto;
 }
+.companie MAIN .stand-wrap .member-list .member .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
 .companie MAIN .stand-wrap .member-list .member .info * {
   margin: 0;
 }
 .companie MAIN .stand-wrap .member-list .member .info > DIV {
   margin-bottom: 4px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  max-width: 100%;
+}
+.companie MAIN .stand-wrap .member-list .member .info DIV.whatsap,
+.companie MAIN .stand-wrap .member-list .member .info DIV.viber,
+.companie MAIN .stand-wrap .member-list .member .info DIV.weechat,
+.companie MAIN .stand-wrap .member-list .member .info DIV.telegram {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 32px;
+  flex: 1 0 32px;
+  max-width: 32px;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+.companie MAIN .stand-wrap .member-list .member .info DIV.whatsap A,
+.companie MAIN .stand-wrap .member-list .member .info DIV.viber A,
+.companie MAIN .stand-wrap .member-list .member .info DIV.weechat A,
+.companie MAIN .stand-wrap .member-list .member .info DIV.telegram A {
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.companie MAIN .stand-wrap .member-list .member .info DIV.whatsap A:before,
+.companie MAIN .stand-wrap .member-list .member .info DIV.viber A:before,
+.companie MAIN .stand-wrap .member-list .member .info DIV.weechat A:before,
+.companie MAIN .stand-wrap .member-list .member .info DIV.telegram A:before {
+  content: "";
+  display: block;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+}
+.companie MAIN .stand-wrap .member-list .member .info DIV.whatsap A::before {
+  background-image: url("../images/icons/whatsapp.svg");
+}
+.companie MAIN .stand-wrap .member-list .member .info DIV.viber A::before {
+  background-image: url("../images/icons/viber.svg");
+}
+.companie MAIN .stand-wrap .member-list .member .info DIV.weechat A::before {
+  background-image: url("../images/icons/wechat.svg");
+}
+.companie MAIN .stand-wrap .member-list .member .info DIV.telegram A::before {
+  background-image: url("../images/icons/telegram.svg");
 }
 .companie MAIN .stand-wrap .member-list .member .info A {
   color: #3a3a3a;
@@ -2101,6 +2297,11 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   .companie HEADER .inner._center.h_between .company-info .company-contacts LI {
     font-size: 14px;
     line-height: 18px;
+  }
+  .companie MAIN .stand-wrap .member-list .member .info {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 @media (max-width: 400px) {
