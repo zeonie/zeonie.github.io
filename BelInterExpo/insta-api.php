@@ -1,7 +1,7 @@
 <?php
-$client_id='1602870073233063';
-$token = 'EAAWxzUVWDqcBAAHZAm0UcZBM1bBZAkFEpCOi8ERkP8hkyuLCz4HxoISL1XGHKQ3c9KtYXIdhd0D00eEQ6nK0eahxMLrkEw3Oh5rLM7byuezrYZAtQZAmRKRPZCyEqEoZCmjEvrSmKJZAPY4YNYsdUcNOgICnMFwpy60pxyTY4MhCygi4RypObEaW';
-$user_id = '/belinterexpo.by';
+$client_id='444479859928742';
+$token = 'IGQVJVZAFVURC1paVYzZAVgtODRmbEt1Vml0YnNMRTFVcDMzOFBkQjFzeUNFT0QxS09ocENmTWVKWkUzQlZA2VWZATTXZAPX1JrR3pOQlRCSFBsOFZAkMmpjUXlXX24yWk5FWWJDZAlQtNG1wdlN5QU5qSGY2ZAAZDZD';
+$user_id = '36254095622';
 $limit = 4; // количество фотографий для вывода
 $output = array();
 $img = array();
@@ -68,16 +68,13 @@ foreach ($img as $data) {
         'description' => $data->caption
     );
 
-    // записываем данные в шаблон MODX.
-    // Если используете другой движок, замените на соответствующий код, например php
-    // $output .= '<a href="'.$data->permalink.'"><img src="'.$data->media_url.'"></a>';
-
+    echo $data->permalink;
+    echo "\n";
+    echo $data->media_url;
+    echo "\n";
     curl_multi_remove_handle($multi, $img); // удаляем исполненные дескрипторы
 }
 
+
 curl_multi_close($multi); // закрываем мультисоединение
 curl_close( $instagram_cnct ); // закрываем соединение
-
-foreach ($dataArray as $insta_data) {
-    echo $insta_data."\n";
-}

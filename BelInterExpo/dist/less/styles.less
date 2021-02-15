@@ -602,6 +602,10 @@ MAIN {
       }
     }
     &#organization {
+      .inner._center {
+        align-items: stretch;
+        justify-content: center;
+      }
       .member {
         text-align: center;
         background-color: @background-grey;
@@ -625,8 +629,54 @@ MAIN {
           UL {
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             LI {
               margin-bottom: 0.5em;
+              flex: 1 0 100%;
+              max-width: 100%;
+              &#c_tg, &#c_wapp, &#c_wechat, &#c_viber {
+                flex: 1 0 32px;
+                max-width: 32px;
+                margin-left: 0.5rem;
+                margin-bottom: 0;
+                A {
+                  font-size: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  &:before {
+                    content: "";
+                    display: block;
+                    background-size: 100% 100%;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    width: 32px;
+                    height: 32px;
+                  }
+                }
+              }
+              &#c_tg {
+                A::before {
+                  background-image: url("../images/icons/telegram.svg");
+                }
+              }
+              &#c_wapp {
+                A::before {
+                  background-image: url("../images/icons/whatsapp.svg");
+                }
+              }
+              &#c_wechat {
+                A::before {
+                  background-image: url("../images/icons/wechat.svg");
+                }
+              }
+              &#c_viber {
+                A::before {
+                  background-image: url("../images/icons/viber.svg");
+                }
+              }
               &:last-child {
                 margin-bottom: 0;
               }
@@ -1531,6 +1581,9 @@ FOOTER {
             height: 24px;
             margin-right: 4px;
           }
+          &:hover {
+            color: @active-hover;
+          }
         }
         .company-contacts {
           display: flex;
@@ -1542,8 +1595,11 @@ FOOTER {
             display: flex;
             align-items: center;
             margin-right: 16px;
-            font-size: 18px;
-            line-height: 22px;
+            font-size: 16px;
+            line-height: 20px;
+            &:last-child {
+              margin-right: 0;
+            }
             IMG {
               max-height: 24px;
               margin-right: 8px;
@@ -1624,6 +1680,7 @@ FOOTER {
         background-color: @background-grey;
         H4 {
           margin-bottom: 0;
+          word-break: break-word;
         }
       }
       .prod-desc {
@@ -1647,7 +1704,11 @@ FOOTER {
       .inner._normal {
         margin: 0 -12px;
         flex-wrap: wrap;
+        justify-content: center;
       }
+    }
+    .container > .member-list .inner._center {
+      align-items: stretch;
     }
     .member-list {
       .inner._center {
@@ -1660,7 +1721,7 @@ FOOTER {
           align-items: center;
           flex-direction: column;
           .member-photo {
-            max-wi  dth: 225px;
+            max-width: 225px;
             margin-bottom: 24px;
           }
           .member-name {
@@ -1676,8 +1737,13 @@ FOOTER {
             UL {
               padding: 0;
               margin: 0;
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
               LI {
                 margin-bottom: 0.5em;
+                flex: 1 0 100%;
+                max-width: 100%;
                 &#job {
                   flex: 1 0 100%;
                   max-width: 100%;
@@ -1686,6 +1752,47 @@ FOOTER {
                     pointer-events: none;
                     font-size: 16px;
                     font-weight: 600;
+                  }
+                }
+                &#c_tg, &#c_wapp, &#c_wechat, &#c_viber {
+                  flex: 1 0 32px;
+                  max-width: 32px;
+                  margin-left: 0.5rem;
+                  margin-bottom: 0;
+                  A {
+                    font-size: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:before {
+                      content: "";
+                      display: block;
+                      background-size: 100% 100%;
+                      background-position: center center;
+                      background-repeat: no-repeat;
+                      width: 32px;
+                      height: 32px;
+                    }
+                  }
+                }
+                &#c_tg {
+                  A::before {
+                    background-image: url("../images/icons/telegram.svg");
+                  }
+                }
+                &#c_wapp {
+                  A::before {
+                    background-image: url("../images/icons/whatsapp.svg");
+                  }
+                }
+                &#c_wechat {
+                  A::before {
+                    background-image: url("../images/icons/wechat.svg");
+                  }
+                }
+                &#c_viber {
+                  A::before {
+                    background-image: url("../images/icons/viber.svg");
                   }
                 }
                 &:last-child {
@@ -1740,11 +1847,57 @@ FOOTER {
             }
           }
           .info {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
             * {
               margin: 0;
             }
             & > DIV {
               margin-bottom: 4px;
+              flex: 1 0 100%;
+              max-width: 100%;
+            }
+            DIV.whatsap, DIV.viber, DIV.weechat, DIV.telegram {
+              flex: 1 0 32px;
+              max-width: 32px;
+              margin-left: 0.5rem;
+              margin-bottom: 0;
+              A {
+                font-size: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:before {
+                  content: "";
+                  display: block;
+                  background-size: 100% 100%;
+                  background-position: center center;
+                  background-repeat: no-repeat;
+                  width: 32px;
+                  height: 32px;
+                }
+              }
+            }
+            DIV.whatsap {
+              A::before {
+                background-image: url("../images/icons/whatsapp.svg");
+              }
+            }
+            DIV.viber {
+              A::before {
+                background-image: url("../images/icons/viber.svg");
+              }
+            }
+            DIV.weechat {
+              A::before {
+                background-image: url("../images/icons/wechat.svg");
+              }
+            }
+            DIV.telegram {
+              A::before {
+                background-image: url("../images/icons/telegram.svg");
+              }
             }
             & A {
               color: @main-color;
@@ -1809,7 +1962,7 @@ FOOTER {
   MAIN .section#products .tab-contents .tab-content .org-items .org-item:nth-child(4n) {
     border-left: 2px solid #fff;
   }
-  .companie MAIN .product-card .prod-desc P {
+  .companie MAIN .product-card .prod-desc P, .companie MAIN .product-card .prod-desc UL {
     display: none;
   }
 }
@@ -1893,6 +2046,9 @@ FOOTER {
   .companie HEADER .inner._center.h_between .company-info .company-contacts LI {
     font-size: 14px;
     line-height: 18px;
+  }
+  .companie MAIN .stand-wrap .member-list .member .info {
+    justify-content: center;
   }
 }
 @media (max-width: 400px) {

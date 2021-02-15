@@ -344,6 +344,12 @@
 #map .map .owl-item {
   display: inline-block;
 }
+#map .map .owl-item {
+  height: 0;
+}
+#map .map .owl-item.active {
+  height: auto;
+}
 #map .map .disabled {
   display: none;
 }
