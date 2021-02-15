@@ -137,6 +137,9 @@
       user-select: none;
       touch-action: none;
     }
+    .belarus-stand IMG {
+      cursor: pointer;
+    }
 
     .panzoom-buttons {
       position: absolute;
@@ -159,6 +162,11 @@
         &:last-child {
           margin-right: 0;
         }
+      }
+
+      @media (max-width: 758px) {
+        position: static;
+        padding: 0 50px;
       }
     }
 

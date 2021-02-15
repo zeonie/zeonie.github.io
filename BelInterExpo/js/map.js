@@ -69,7 +69,9 @@ $(document).ready(function() {
         cursor: 'move',
         maxScale: 4,
         minScale: 1,
-        initialZoom: 1
+        initialZoom: 1,
+        contain: "outside",
+        panOnlyWhenZoomed: true
     });
     const parent = elem.parentElement
 // No function bind needed
@@ -77,32 +79,26 @@ $(document).ready(function() {
     zoomInButton.addEventListener('click', panzoom.zoomIn)
     zoomOutButton.addEventListener('click', panzoom.zoomOut);
     resetButton.addEventListener('click', panzoom.reset)
-    elem.addEventListener('panzoomchange', (event) => {
+    // elem.addEventListener('panzoomend', (event) => {
         // if (event.detail.x > initialWidth) {
         //     panzoom.pan(0, event.detail.y, { animate: true })
         // } else if (-initialWidth > event.detail.x) {
         //     panzoom.pan(0, event.detail.y, { animate: true })
         // }
 
-        // if((elem.getBoundingClientRect().top + elem.getBoundingClientRect().height - 100) < cont.getBoundingClientRect().top) {
-        //     panzoom.pan(0, event.detail.y, { animate: true })
-        // }
-        // if(elem.getBoundingClientRect().top > (cont.getBoundingClientRect().top + cont.getBoundingClientRect().height)) {
-        //     panzoom.pan(0, event.detail.y, { animate: true })
-        // }
-        // if(elem.getBoundingClientRect().left + elem.getBoundingClientRect().width < cont.getBoundingClientRect().left) {
-        //     panzoom.pan(0, event.detail.y, { animate: true })
-        // }
-        // if(elem.getBoundingClientRect().left > cont.getBoundingClientRect().left + cont.getBoundingClientRect().width) {
-        //     panzoom.pan(0, event.detail.y, { animate: true })
-        // }
-
         // var childP = elem.getBoundingClientRect();
         // var parentP = cont.getBoundingClientRect();
-        // if(parentP.left >= childP.right-200 || parentP.right <= childP.left+200) {
-        //     panzoom.pan(childP.left, 0, { animate: true });
-        // } if(parentP.top >= childP.bottom-200 || parentP.bottom <= childP.top-200) {
-        //     panzoom.pan(0, childP.top, { animate: true });
+        // if(parentP.left >= childP.right-childP.width*0.3) {
+        //     panzoom.pan(parentP.left - childP.width + childP.width*0.3, 0, { animate: true });
         // }
-    });
+        // if(parentP.right <= childP.left+childP.width*0.3) {
+        //     panzoom.pan(parentP.right - childP.width*0.3, 0, { animate: true });
+        // }
+        // if(parentP.top >= childP.bottom-childP.height*0.3) {
+        //     panzoom.pan(0, parentP.top - childP.height + childP.height*0.3, { animate: true });
+        // }
+        // if(parentP.bottom <= childP.top+childP.height*0.3) {
+        //     panzoom.pan(0, childP.top - childP.height*0.3, { animate: true });
+        // }
+    // });
 });
