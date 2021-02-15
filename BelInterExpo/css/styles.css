@@ -356,11 +356,28 @@ MAIN .section .section-content {
 MAIN .section .sub-title {
   margin-bottom: 22px;
 }
+MAIN .section#gulfood .about-card-text {
+  padding: 48px;
+}
+MAIN .section#gulfood .about-card-text P {
+  margin-bottom: 2em;
+  font-size: 18px;
+}
+MAIN .section#gulfood .about-card-video {
+  position: relative;
+  min-height: 320px;
+}
+MAIN .section#gulfood .about-card-video > IFRAME {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
 MAIN .section#about-us .about-card-text {
   padding: 48px;
 }
 MAIN .section#about-us .about-card-text P {
   margin-bottom: 2em;
+  font-size: 18px;
 }
 MAIN .section#about-us .about-card-video {
   position: relative;
@@ -373,7 +390,7 @@ MAIN .section#about-us .about-card-video > IFRAME {
 }
 MAIN .section#about-us .text-center {
   text-align: center;
-  margin-top: 105px;
+  /*margin-top: 105px;*/
 }
 MAIN .section#about-us .text-center > P {
   margin-bottom: 0;
@@ -421,6 +438,7 @@ MAIN .section#about-us .member-list {
   flex-wrap: wrap;
   background-color: #eaeaea;
   margin-top: 18px;
+  margin-bottom: 32px;
 }
 MAIN .section#about-us .member-list .member {
   -webkit-box-flex: 1;
