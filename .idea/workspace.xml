@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0fda8a13-dc92-44c5-b2c1-79d825f19e77" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BelInterExpo/images/render/babushka.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BelInterExpo/images/render/grodno.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BelInterExpo/images/render/milgostinec.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BelInterExpo/images/render/milkmir.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BelInterExpo/images/render/pinsk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BelInterExpo/images/render/primemilk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BelInterExpo/images/render/rogachev.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BelInterExpo/images/render/slonim.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BelInterExpo/images/render/soligorsk.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/Index-ru.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/Index-ru.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/Index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/en/companie_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/en/companie_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/en/companie_10.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/en/companie_10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/en/companie_11.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/en/companie_11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/en/companie_12.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/en/companie_12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/en/companie_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/en/companie_5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/en/companie_6.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/en/companie_6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/en/companie_7.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/en/companie_7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/en/companie_8.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/en/companie_8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/en/companie_9.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/en/companie_9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/images/person-main/brylo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/images/person-main/brylo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/images/person-main/ulahovich.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/images/person-main/ulahovich.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/images/person-main/yakovchits.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/images/person-main/yakovchits.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/ru/companie_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/ru/companie_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/ru/companie_10.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/ru/companie_10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/ru/companie_11.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/ru/companie_11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/ru/companie_12.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/ru/companie_12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/ru/companie_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/ru/companie_5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/ru/companie_6.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/ru/companie_6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/ru/companie_7.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/ru/companie_7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/ru/companie_8.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/ru/companie_8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelInterExpo/ru/companie_9.html" beforeDir="false" afterPath="$PROJECT_DIR$/BelInterExpo/ru/companie_9.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectId" id="1oUBW5l9kThiBxP48M9vdV5EXUx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Администратор\Documents\GitHub\zeonie.github.io\BelInterExpo\images\render" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0fda8a13-dc92-44c5-b2c1-79d825f19e77" name="Default Changelist" comment="" />
+      <created>1613331317381</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613331317381</updated>
+      <workItem from="1613331320591" duration="4629000" />
+      <workItem from="1613376757396" duration="10317000" />
+      <workItem from="1613391420111" duration="4537000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+</project>
