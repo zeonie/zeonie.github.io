@@ -477,6 +477,7 @@ MAIN .section#about-us .member-list .member .photo IMG {
 }
 MAIN .section#about-us .member-list .member .info * {
   margin: 0;
+  font-size: 18px;
 }
 MAIN .section#about-us .member-list .member .info > DIV {
   margin-bottom: 4px;
@@ -592,6 +593,7 @@ MAIN .section#products .tab-contents .tab-content {
 }
 MAIN .section#products .tab-contents .tab-content * {
   color: #fff;
+  font-size: 18px;
 }
 MAIN .section#products .tab-contents .tab-content._is-active {
   display: block;
@@ -645,7 +647,7 @@ MAIN .section#products .tab-contents .tab-content .org-items .org-item IMG {
 }
 MAIN .section#products .tab-contents .tab-content .org-items .org-item SPAN {
   color: #fff;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 18px;
 }
 MAIN .section#products .tab-contents .tab-content .org-items .org-item:hover {
@@ -1111,7 +1113,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     line-height: 1.2em;
   }
   MAIN .section#products .tab-contents .tab-content .org-items .org-item SPAN {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 18px;
   }
   MAIN .section#about-us .member-list .member {
@@ -1459,7 +1461,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     max-width: 54px;
   }
   MAIN .section#products .tab-contents .tab-content .org-items .org-item SPAN {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 20px;
   }
 }
@@ -1508,7 +1510,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   }
   MAIN .section#about-us .member-list .member .photo {
     max-width: 100px;
-    height: 100px;
+    height: 130px;
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1803,6 +1805,18 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   content: "";
   display: block;
   background-image: url("../images/icons/youtube.svg");
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+
+.companie HEADER .place::before {
+  content: "";
+  display: block;
+  background-image: url("../images/icons/placement.svg");
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
