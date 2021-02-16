@@ -6,6 +6,7 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 0;
+  padding-left: 0;
 }
 #map .map-navigation > li {
   width: 33%;
@@ -418,6 +419,9 @@
   #map .map-3 {
     display: block;
   }
+  #map .map .map-navigation LI {
+    font-size: 14px;
+  }
 }
 @media (max-width: 525px) {
   #map .map-3 {
@@ -426,5 +430,17 @@
   }
   #map .map-3 .flex-wrapper {
     display: block;
+  }
+  #map .map .map-navigation {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  #map .map .map-navigation LI {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid #979797;
+  }
+  #map .map .map-navigation LI:last-child {
+    border-bottom: 0;
   }
 }
