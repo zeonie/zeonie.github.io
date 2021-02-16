@@ -108,4 +108,66 @@ $(document).ready(function() {
     //     }
     // });
     /*modal companie*/
+    /*form sumbit*/
+        let myFrom = $('#sf');
+        myFrom.on('submit', function(e) {
+            e.preventDefault();
+            let formData = new FormData();
+            formData.append("name", $('input[name="t_name"]').val());
+            formData.append("phone", $('input[name="t_phone"]').val());
+            formData.append("message", $('input[name="t_message"]').val());
+            $.ajax({
+                url: "/form.php",
+                type: "POST",
+                dataType: "json",
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: formData,
+                success: function (data) {
+                    if (data.ok == "Y") {
+                        $("#sf")[0].reset();
+                        $("#result").css("display", "block");
+                        $("#result").addClass("success");
+                        if ($("#sf").hasClass("en")) {
+                            $("#result").text("Your mail has been sent for our managers!");
+                        } else {
+                            $("#result").text("Ваше письмо было отправлено нашим менеджерам!");
+                        }
+                        setTimeout(function () {
+                            $("#result").hide();
+                        }, 3000);
+                    } else {
+                        $("#result").css("display", "block");
+                        $("#result").addClass("warning");
+                        if ($("#sf").hasClass("en")) {
+                            $("#result").text("An error has occurred! Please try again later.");
+                        } else {
+                            $("#result").text("Произошла ошибка! Пожалуйста, повторите попытку позже.");
+                        }
+                        setTimeout(function () {
+                            $("#result").hide();
+                        }, 3000);
+                    }
+                },
+                error: function (data) {
+                    console.log(data);
+                },
+            });
+            // Prevents default submission of the form after clicking on the submit button.
+            return false;
+        });
+    /*form sumbit*/
+    /* companie footer */
+     let companyTriggerForm = $('.companie FOOTER > A.btn'),
+         formWrap = $('.form-wrap');
+     companyTriggerForm.on('click',function(e) {
+         e.preventDefault();
+         if ( formWrap.hasClass('_show') ) {
+             formWrap.slideUp(300).removeClass('_show');
+         } else {
+             formWrap.slideDown(300).addClass('_show');
+         }
+     });
+    /* comapnie footer*/
 })

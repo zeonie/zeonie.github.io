@@ -179,6 +179,26 @@ IMG {
 .mfp-iframe-holder .mfp-close:hover {
   color: #3a9e19;
 }
+p#result {
+  margin-bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  line-height: 26px;
+  padding: 7px 14px;
+  display: none;
+  z-index: 4;
+}
+p#result.success {
+  background-color: #4aca20;
+}
+p#result.warning {
+  background-color: red;
+}
 HEADER {
   background-color: #000000;
   position: relative;
@@ -187,10 +207,9 @@ HEADER * {
   color: #f3f3f3;
 }
 HEADER A.logo-link {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -209,6 +228,18 @@ HEADER A.logo-link::before {
   background-position: center center;
   background-repeat: no-repeat;
   margin-right: 7px;
+}
+HEADER A.logo-link:last-child {
+  padding-left: 12px;
+  position: relative;
+}
+HEADER A.logo-link:last-child::before {
+  content: "";
+  width: 2px;
+  background-color: #fff;
+  margin-right: 12px;
+  display: block;
+  background-image: none;
 }
 HEADER .lang-items {
   display: -webkit-box;
@@ -301,8 +332,11 @@ HEADER .banner .banner-logos {
   padding: 56px 24px;
   background: #f3f3f3;
 }
-HEADER .banner .banner-logos IMG:first-child {
+HEADER .banner .banner-logos IMG {
   margin-bottom: 28px;
+}
+HEADER .banner .banner-logos IMG:last-child {
+  margin-bottom: 0;
 }
 HEADER #nav {
   position: absolute;
@@ -379,7 +413,7 @@ MAIN .section#gulfood .about-card-video > IFRAME {
 MAIN .section#about-us .text-center,
 MAIN .section#gulfood .text-center {
   text-align: center;
-  /*margin-top: 105px;*/
+  margin-top: 105px;
 }
 MAIN .section#about-us .text-center > P,
 MAIN .section#gulfood .text-center > P {
@@ -844,6 +878,9 @@ MAIN .section#events .events-list .event-wrap {
   flex: 1 0 25%;
   max-width: 25%;
   padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 MAIN .section#events .events-list .event-wrap:first-child {
   padding-left: 0;
@@ -851,12 +888,11 @@ MAIN .section#events .events-list .event-wrap:first-child {
 MAIN .section#events .events-list .event-wrap .event {
   background-color: #eaeaea;
   position: relative;
-  height: 100%;
 }
 MAIN .section#events .events-list .event-wrap .event .image-wrap {
   width: 100%;
   height: 280px;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -1059,7 +1095,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     padding: 0 12px;
   }
   MAIN .section#events .events-list .event-wrap .event .image-wrap {
-    height: 200px;
+    height: 280px;
   }
 }
 @media (max-width: 1024px) {
@@ -1201,6 +1237,39 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     margin-bottom: 32px;
   }
 }
+@media (max-width: 991px) {
+  HEADER .banner .banner-logos {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%;
+    max-width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto 22px;
+  }
+  HEADER .banner .banner-logos IMG {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 48%;
+    flex: 1 0 48%;
+    max-width: 48%;
+  }
+  HEADER .banner .banner-logos IMG:last-child {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+}
 @media (min-width: 867px) {
   .hamburger {
     display: none;
@@ -1286,9 +1355,9 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   }
   HEADER .banner .banner-logos {
     -webkit-box-flex: 1;
-    -ms-flex: 1 0 50%;
-    flex: 1 0 50%;
-    max-width: 50%;
+    -ms-flex: 1 0 70%;
+    flex: 1 0 70%;
+    max-width: 70%;
     -webkit-box-ordinal-group: 1;
     -ms-flex-order: 0;
     order: 0;
@@ -1306,7 +1375,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     -ms-flex: 1 0 48%;
     flex: 1 0 48%;
     max-width: 48%;
-    margin-bottom: 0 !important;
+    margin-bottom: 28px;
   }
   HEADER #nav {
     position: fixed;
@@ -1406,15 +1475,15 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   }
   HEADER .banner .banner-logos {
     -webkit-box-flex: 1;
-    -ms-flex: 1 0 280px;
-    flex: 1 0 280px;
-    max-width: 280px;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    max-width: 100%;
   }
-  HEADER .inner {
+  HEADER > .container .inner {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
-  HEADER .inner .w20 {
+  HEADER > .container .inner .w30 {
     display: none;
   }
   HEADER .contact-items {
@@ -2052,6 +2121,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
 }
 .companie MAIN .stand-wrap .stand-img IMG {
   margin: 0 auto;
+  width: 55%;
 }
 .companie MAIN .stand-wrap .member-list {
   display: -webkit-box;
@@ -2097,8 +2167,8 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   margin-right: 22px;
 }
 .companie MAIN .stand-wrap .member-list .member .photo IMG {
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
 }
 .companie MAIN .stand-wrap .member-list .member .info {
   display: -webkit-box;
@@ -2203,6 +2273,31 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   box-shadow: inset 0 50px 0 0 #fff;
   color: #3a9e19;
 }
+.companie FOOTER .form-wrap {
+  margin-top: 18px;
+  display: none;
+}
+.companie FOOTER .form-wrap FORM .form-group * {
+  border-color: #fff;
+}
+.companie FOOTER .form-wrap FORM .form-group BUTTON {
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 14px;
+  line-height: 20px;
+  width: 240px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.companie FOOTER .form-wrap FORM .form-group BUTTON:hover {
+  -webkit-box-shadow: inset 0 50px 0 0 #fff;
+  box-shadow: inset 0 50px 0 0 #fff;
+  color: #3a9e19;
+}
 @media (max-width: 1024px) {
   .companie MAIN .product-card {
     -webkit-box-flex: 1;
@@ -2266,28 +2361,9 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     -ms-flex-order: 1;
     order: 1;
   }
-  HEADER .banner .banner-logos {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 100%;
-    flex: 1 0 100%;
-    max-width: 100%;
-    -webkit-box-ordinal-group: 1;
-    -ms-flex-order: 0;
-    order: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: 0 auto 24px auto;
-  }
-  HEADER .banner .banner-logos IMG {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 48%;
-    flex: 1 0 48%;
-    max-width: 48%;
-    margin-bottom: 0 !important;
+  .companie MAIN .stand-wrap .stand-img IMG {
+    margin: 0 auto;
+    width: 70%;
   }
 }
 @media (max-width: 768px) {
@@ -2317,6 +2393,10 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   .companie MAIN .stand-wrap .member-list {
     margin: 0 18px;
     background-color: transparent;
+  }
+  .companie MAIN .stand-wrap .stand-img IMG {
+    margin: 0 auto;
+    width: 100%;
   }
 }
 @media (max-width: 575px) {

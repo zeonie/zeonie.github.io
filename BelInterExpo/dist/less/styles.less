@@ -156,6 +156,26 @@ IMG {
     color: @active-hover;
   }
 }
+p#result {
+  margin-bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  line-height: 26px;
+  padding: 7px 14px;
+  display: none;
+  z-index: 4;
+  &.success {
+    background-color: @active-color;
+  }
+  &.warning {
+    background-color: red;
+  }
+}
 HEADER {
   background-color: @black-color;
   position: relative;
@@ -163,8 +183,7 @@ HEADER {
     color: @white-color;
   }
   A.logo-link {
-    width: 100%;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     img {
       width: auto;
@@ -180,6 +199,18 @@ HEADER {
       background-position: center center;
       background-repeat: no-repeat;
       margin-right: 7px;
+    }
+    &:last-child {
+      padding-left: 12px;
+      position: relative;
+      &::before {
+        content: "";
+        width: 2px;
+        background-color: #fff;
+        margin-right: 12px;
+        display: block;
+        background-image: none;
+      }
     }
   }
   .lang-items {
@@ -258,8 +289,9 @@ HEADER {
       padding: 56px 24px;
       background: #f3f3f3;
       & IMG {
-        &:first-child {
-          margin-bottom: 28px;
+        margin-bottom: 28px;
+        &:last-child{
+          margin-bottom: 0;
         }
       }
     }
@@ -707,17 +739,17 @@ MAIN {
           flex: 1 0 25%;
           max-width: 25%;
           padding-left: 15px;
+          display: flex;
           &:first-child {
             padding-left: 0;
           }
           .event {
             background-color: @background-grey;
             position: relative;
-            height: 100%;
             .image-wrap {
               width: 100%;
               height: 280px;
-              background-size: cover;
+              background-size: contain;
               background-position: center center;
               background-repeat: no-repeat;
             }
@@ -913,7 +945,7 @@ FOOTER {
     }
   }
   MAIN .section#events .events-list .event-wrap .event .image-wrap {
-    height: 200px;
+    height: 280px;
   }
 }
 @media (max-width: 1024px) {
@@ -1068,6 +1100,30 @@ FOOTER {
     }
   }
 }
+@media (max-width: 991px) {
+  HEADER {
+    .banner {
+      .banner-logos {
+        flex: 1 0 50%;
+        max-width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto 22px;
+        IMG {
+          flex: 1 0 48%;
+          max-width: 48%;
+          &:last-child {
+            flex: 1 0 100%;
+            max-width: 100%;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
 @media (min-width: 867px) {
   .hamburger {
     display: none;
@@ -1143,8 +1199,8 @@ FOOTER {
         order: 1;
       }
       .banner-logos {
-        flex: 1 0 50%;
-        max-width: 50%;
+        flex: 1 0 70%;
+        max-width: 70%;
         order: 0;
         margin: 0 auto 24px auto;
         padding: 24px 12px;
@@ -1153,7 +1209,7 @@ FOOTER {
         IMG {
           flex: 1 0 48%;
           max-width: 48%;
-          margin-bottom: 0 !important;
+          margin-bottom: 28px;
         }
       }
     }
@@ -1249,14 +1305,16 @@ FOOTER {
   HEADER {
     .banner {
       .banner-logos {
-        flex: 1 0 280px;
-        max-width: 280px;
+        flex: 1 0 100%;
+        max-width: 100%;
       }
     }
-    .inner {
-      flex-wrap: nowrap;
-      .w20 {
-        display: none;
+    & > .container {
+      .inner {
+        flex-wrap: nowrap;
+        .w30 {
+          display: none;
+        }
       }
     }
     .contact-items {
@@ -1833,6 +1891,7 @@ FOOTER {
       .stand-img {
         IMG {
           margin: 0 auto;
+          width: 55%;
         }
       }
       .member-list {
@@ -1859,8 +1918,8 @@ FOOTER {
             justify-content: center;
             margin-right: 22px;
             IMG {
-              height: 100%;
-              width: auto;
+              width: 100%;
+              height: auto;
             }
           }
           .info {
@@ -1952,6 +2011,33 @@ FOOTER {
         color: @active-hover;
       }
     }
+    .form-wrap {
+      margin-top: 18px;
+      display: none;
+      FORM {
+        .form-group {
+          & * {
+            border-color: #fff;
+          }
+          BUTTON {
+            display: inline-block;
+            padding: 14px 24px;
+            font-size: 14px;
+            line-height: 20px;
+            width: 240px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-transform: uppercase;
+            background: transparent;
+            box-shadow: none;
+            &:hover {
+              box-shadow: inset 0 50px 0 0 #fff;
+              color: #3a9e19;
+            }
+          }
+        }
+      }
+    }
   }
 }
 @media (max-width: 1024px) {
@@ -2003,18 +2089,9 @@ FOOTER {
     max-width: 100%;
     order: 1;
   }
-  HEADER .banner .banner-logos {
-    flex: 1 0 100%;
-    max-width: 100%;
-    order: 0;
-    display: flex;
-    align-items: center;
-    margin: 0 auto 24px auto;
-    IMG {
-      flex: 1 0 48%;
-      max-width: 48%;
-      margin-bottom: 0 !important;
-    }
+  .companie MAIN .stand-wrap .stand-img IMG {
+    margin: 0 auto;
+    width: 70%;
   }
 }
 @media (max-width: 768px) {
@@ -2040,6 +2117,10 @@ FOOTER {
   .companie MAIN .stand-wrap .member-list {
     margin: 0 18px;
     background-color: transparent;
+  }
+  .companie MAIN .stand-wrap .stand-img IMG {
+    margin: 0 auto;
+    width: 100%;
   }
 }
 @media (max-width: 575px) {
