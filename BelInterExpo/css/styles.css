@@ -356,17 +356,18 @@ MAIN .section .section-content {
 MAIN .section .sub-title {
   margin-bottom: 22px;
 }
-MAIN .section#about-us .about-card-text {
+MAIN .section#gulfood .about-card-text {
   padding: 48px;
 }
-MAIN .section#about-us .about-card-text P {
+MAIN .section#gulfood .about-card-text P {
   margin-bottom: 2em;
 }
-MAIN .section#about-us .about-card-video {
+MAIN .section#gulfood .about-card-video {
   position: relative;
   min-height: 320px;
+  max-height: 320px;
 }
-MAIN .section#about-us .about-card-video > IFRAME {
+MAIN .section#gulfood .about-card-video > IFRAME {
   border: 0;
   width: 100%;
   height: 100%;
@@ -375,15 +376,15 @@ MAIN .section#about-us .text-center {
   text-align: center;
   margin-top: 105px;
 }
-MAIN .section#about-us .text-center > P {
+MAIN .section#gulfood .text-center > P {
   margin-bottom: 0;
   font-size: 24px;
   line-height: 28px;
 }
-MAIN .section#about-us .carousel-wrap {
+MAIN .section#gulfood .carousel-wrap {
   margin-top: 62px;
 }
-MAIN .section#about-us .carousel-wrap .owl-dots {
+MAIN .section#gulfood .carousel-wrap .owl-dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,7 +393,7 @@ MAIN .section#about-us .carousel-wrap .owl-dots {
   justify-content: center;
   margin-top: 1.5em;
 }
-MAIN .section#about-us .carousel-wrap .owl-dots > .owl-dot {
+MAIN .section#gulfood .carousel-wrap .owl-dots > .owl-dot {
   display: block;
   width: 14px;
   height: 14px;
@@ -404,16 +405,16 @@ MAIN .section#about-us .carousel-wrap .owl-dots > .owl-dot {
   border-radius: 50%;
   margin-right: 14px;
 }
-MAIN .section#about-us .carousel-wrap .owl-dots > .owl-dot:last-child {
+MAIN .section#gulfood .carousel-wrap .owl-dots > .owl-dot:last-child {
   margin-right: 0;
 }
-MAIN .section#about-us .carousel-wrap .owl-dots > .owl-dot:hover {
+MAIN .section#gulfood .carousel-wrap .owl-dots > .owl-dot:hover {
   background-color: #3a9e19;
 }
-MAIN .section#about-us .carousel-wrap .owl-dots > .owl-dot.active {
+MAIN .section#gulfood .carousel-wrap .owl-dots > .owl-dot.active {
   background-color: #4aca20;
 }
-MAIN .section#about-us .member-list {
+MAIN .section#gulfood .member-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,7 +423,7 @@ MAIN .section#about-us .member-list {
   background-color: #eaeaea;
   margin-top: 18px;
 }
-MAIN .section#about-us .member-list .member {
+MAIN .section#gulfood .member-list .member {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 33.333333%;
   flex: 1 0 33.333333%;
@@ -436,7 +437,7 @@ MAIN .section#about-us .member-list .member {
   -ms-flex-align: center;
   align-items: center;
 }
-MAIN .section#about-us .member-list .member .photo {
+MAIN .section#gulfood .member-list .member .photo {
   min-width: 125px;
   height: 220px;
   overflow: hidden;
@@ -451,23 +452,23 @@ MAIN .section#about-us .member-list .member .photo {
   justify-content: center;
   margin-right: 14px;
 }
-MAIN .section#about-us .member-list .member .photo IMG {
+MAIN .section#gulfood .member-list .member .photo IMG {
   width: auto;
   max-width: unset;
   height: 100%;
   display: block;
 }
-MAIN .section#about-us .member-list .member .info * {
+MAIN .section#gulfood .member-list .member .info * {
   margin: 0;
 }
-MAIN .section#about-us .member-list .member .info > DIV {
+MAIN .section#gulfood .member-list .member .info > DIV {
   margin-bottom: 4px;
 }
-MAIN .section#about-us .member-list .member .info A {
+MAIN .section#gulfood .member-list .member .info A {
   color: #3a3a3a;
   font-weight: 400;
 }
-MAIN .section#about-us .member-list .member .info A:hover {
+MAIN .section#gulfood .member-list .member .info A:hover {
   color: #3a9e19;
 }
 MAIN .section#products .inner {
@@ -1096,7 +1097,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     font-size: 14px;
     line-height: 18px;
   }
-  MAIN .section#about-us .member-list .member {
+  MAIN .section#gulfood .member-list .member {
     -webkit-box-flex: 1;
     -ms-flex: 1 0  50%;
     flex: 1 0  50%;
@@ -1110,7 +1111,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     -ms-flex-align: center;
     align-items: center;
   }
-  MAIN .section#about-us .member-list .member .photo {
+  MAIN .section#gulfood .member-list .member .photo {
     min-width: 125px;
     height: 220px;
     overflow: hidden;
@@ -1125,23 +1126,23 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     justify-content: center;
     margin-right: 14px;
   }
-  MAIN .section#about-us .member-list .member .photo IMG {
+  MAIN .section#gulfood .member-list .member .photo IMG {
     width: auto;
     max-width: unset;
     height: 100%;
     display: block;
   }
-  MAIN .section#about-us .member-list .member .info * {
+  MAIN .section#gulfood .member-list .member .info * {
     margin: 0;
   }
-  MAIN .section#about-us .member-list .member .info > DIV {
+  MAIN .section#gulfood .member-list .member .info > DIV {
     margin-bottom: 4px;
   }
-  MAIN .section#about-us .member-list .member .info A {
+  MAIN .section#gulfood .member-list .member .info A {
     color: #3a3a3a;
     font-weight: 400;
   }
-  MAIN .section#about-us .member-list .member .info A:hover {
+  MAIN .section#gulfood .member-list .member .info A:hover {
     color: #3a9e19;
   }
   FOOTER .main-footer {
@@ -1198,6 +1199,14 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   }
   HEADER {
     position: static;
+    margin-top: 52px;
+  }
+  HEADER > .container:first-child {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #000;
+    z-index: 2;
   }
   HEADER .hamburger {
     display: block;
@@ -1409,7 +1418,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     justify-content: center;
   }
   MAIN .section#products .tab-items .tab-item > A {
-    height: 100%;
+    height: 62px;
     -ms-flex-line-pack: center;
     align-content: center;
   }
@@ -1474,7 +1483,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     width: 70%;
     padding-left: 12px;
   }
-  MAIN .section#about-us .member-list .member {
+  MAIN .section#gulfood .member-list .member {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 100%;
     flex: 1 0 100%;
@@ -1488,7 +1497,7 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     -ms-flex-align: center;
     align-items: center;
   }
-  MAIN .section#about-us .member-list .member .photo {
+  MAIN .section#gulfood .member-list .member .photo {
     max-width: 100px;
     height: 100px;
     overflow: hidden;
@@ -1503,24 +1512,24 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     justify-content: center;
     margin-right: 7px;
   }
-  MAIN .section#about-us .member-list .member .photo IMG {
+  MAIN .section#gulfood .member-list .member .photo IMG {
     width: 100%;
     max-width: unset;
     height: auto;
     display: block;
   }
-  MAIN .section#about-us .member-list .member .info * {
+  MAIN .section#gulfood .member-list .member .info * {
     margin: 0;
   }
-  MAIN .section#about-us .member-list .member .info > DIV {
+  MAIN .section#gulfood .member-list .member .info > DIV {
     margin-bottom: 4px;
     font-size: 13px;
   }
-  MAIN .section#about-us .member-list .member .info A {
+  MAIN .section#gulfood .member-list .member .info A {
     color: #3a3a3a;
     font-weight: 400;
   }
-  MAIN .section#about-us .member-list .member .info A:hover {
+  MAIN .section#gulfood .member-list .member .info A:hover {
     color: #3a9e19;
   }
 }
@@ -1554,6 +1563,9 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     -ms-flex: 1 0 100%;
     flex: 1 0 100%;
     max-width: 100%;
+  }
+  MAIN .section#events .events-list .event-wrap .event {
+    height: auto;
   }
   MAIN .section#docs .docs-cards .docs-card {
     -webkit-box-flex: 1;
@@ -1598,17 +1610,17 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
   }
 }
 @media (max-width: 420px) {
-  MAIN .section#about-us .member-list .member {
+  MAIN .section#gulfood .member-list .member {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
   }
-  MAIN .section#about-us .member-list .member .photo {
+  MAIN .section#gulfood .member-list .member .photo {
     margin-bottom: 12px;
   }
-  MAIN .section#about-us .member-list .member .info {
+  MAIN .section#gulfood .member-list .member .info {
     text-align: center;
   }
 }
