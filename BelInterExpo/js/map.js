@@ -27,11 +27,20 @@ $(document).ready(function() {
     // Third Map
     var $svgSections = $('.map-3 #overlay rect, .map-3 #overlay polygon, .map-3 #overlay path');
     var $categorySelects = $('.category-select');
+    var select = $('select[name="category-select-tag"]');
+
+    select.on('change', function(){
+        $('.category-select[category-select='+ select.val() +']').trigger('click');
+        // unhightlightAll($categorySelects);
+        // unhightlightAll($svgSections);
+        // highlightSvgSections(select.val(), true);
+    });
 
     $categorySelects.on('click', function(e){
         unhightlightAll($categorySelects);
         $(e.target).toggleClass('active');
         unhightlightAll($svgSections);
+        select.val($(e.target).attr('category-select'));
         highlightSvgSections($(e.target).attr('category-select'), $(e.target).hasClass('active'));
     })
 

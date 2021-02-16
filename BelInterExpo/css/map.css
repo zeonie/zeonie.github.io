@@ -42,14 +42,14 @@
   height: auto;
 }
 #map .map-slide .tooltip {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  bottom: -50px;
-  width: 60%;
-  max-width: 600px;
+  /* bottom: -50px; */
+  /* width: 60%; */
+  max-width: 100%;
   padding: 36px;
   background: white;
-  left: 13%;
+  /* left: 13%; */
   -webkit-box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.3);
 }
@@ -340,6 +340,11 @@
   background: green;
   color: white;
 }
+#map .map-3 .category-select-tag {
+  display: none;
+  margin-bottom: 14px;
+  width: 100%;
+}
 #map .map .owl-stage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -414,6 +419,12 @@
     width: 100%;
   }
   #map .map-3 {
+    display: block;
+  }
+  #map .map-3 .filter-chooser span.category-select {
+    display: none;
+  }
+  #map .map-3 .category-select-tag {
     display: block;
   }
   #map .map .map-navigation LI {
