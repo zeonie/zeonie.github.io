@@ -272,6 +272,9 @@
   -ms-touch-action: none;
   touch-action: none;
 }
+#map .map-2 .belarus-stand IMG {
+  cursor: pointer;
+}
 #map .map-2 .panzoom-buttons {
   position: absolute;
   bottom: 20px;
@@ -293,6 +296,12 @@
 }
 #map .map-2 .panzoom-buttons BUTTON:last-child {
   margin-right: 0;
+}
+@media (max-width: 758px) {
+  #map .map-2 .panzoom-buttons {
+    position: static;
+    padding: 0 50px;
+  }
 }
 #map .map-3 {
   padding: 24px 50px 50px;
