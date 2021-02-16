@@ -71,7 +71,9 @@ $(document).ready(function() {
         minScale: 1,
         initialZoom: 1,
         contain: "outside",
-        panOnlyWhenZoomed: true
+        panOnlyWhenZoomed: true,
+        // startScale: 3,
+        // startX: 150
     });
     const parent = elem.parentElement
 // No function bind needed
@@ -79,26 +81,4 @@ $(document).ready(function() {
     zoomInButton.addEventListener('click', panzoom.zoomIn)
     zoomOutButton.addEventListener('click', panzoom.zoomOut);
     resetButton.addEventListener('click', panzoom.reset)
-    // elem.addEventListener('panzoomend', (event) => {
-        // if (event.detail.x > initialWidth) {
-        //     panzoom.pan(0, event.detail.y, { animate: true })
-        // } else if (-initialWidth > event.detail.x) {
-        //     panzoom.pan(0, event.detail.y, { animate: true })
-        // }
-
-        // var childP = elem.getBoundingClientRect();
-        // var parentP = cont.getBoundingClientRect();
-        // if(parentP.left >= childP.right-childP.width*0.3) {
-        //     panzoom.pan(parentP.left - childP.width + childP.width*0.3, 0, { animate: true });
-        // }
-        // if(parentP.right <= childP.left+childP.width*0.3) {
-        //     panzoom.pan(parentP.right - childP.width*0.3, 0, { animate: true });
-        // }
-        // if(parentP.top >= childP.bottom-childP.height*0.3) {
-        //     panzoom.pan(0, parentP.top - childP.height + childP.height*0.3, { animate: true });
-        // }
-        // if(parentP.bottom <= childP.top+childP.height*0.3) {
-        //     panzoom.pan(0, childP.top - childP.height*0.3, { animate: true });
-        // }
-    // });
 });
