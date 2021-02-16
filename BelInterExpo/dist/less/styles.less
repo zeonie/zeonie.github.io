@@ -307,7 +307,7 @@ MAIN {
     .sub-title {
       margin-bottom: 22px;
     }
-    &#gulfood {
+    &#about-us {
       .about-card-text {
         padding: 48px;
         P {
@@ -317,7 +317,6 @@ MAIN {
       .about-card-video {
         position: relative;
         min-height: 320px;
-        max-height: 320px;
         & > IFRAME {
           border: 0;
           width: 100%;
@@ -997,7 +996,7 @@ FOOTER {
           }
         }
       }
-      &#gulfood {
+      &#about-us {
         .member-list {
           .member {
             flex: 1 0  50%;
@@ -1086,14 +1085,6 @@ FOOTER {
   }
   HEADER {
     position: static;
-    margin-top: 52px;
-    & > .container:first-child {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: #000;
-      z-index: 2;
-    }
     .hamburger {
       display: block;
       width: 52px;
@@ -1278,7 +1269,7 @@ FOOTER {
           justify-content: center;
           .tab-item {
             & > A {
-              height: 62px;
+              height: 100%;
               align-content: center;
               &._is-active {
                 border-right: 2px solid #4aca20;
@@ -1344,7 +1335,7 @@ FOOTER {
   }
   MAIN {
     .section {
-      &#gulfood {
+      &#about-us {
         .member-list {
           .member {
             flex: 1 0 100%;
@@ -1425,9 +1416,6 @@ FOOTER {
           .event-wrap {
             flex: 1 0 100%;
             max-width: 100%;
-            .event {
-              height: auto;
-            }
           }
         }
       }
@@ -1486,14 +1474,14 @@ FOOTER {
   }
 }
 @media (max-width: 420px) {
-  MAIN .section#gulfood .member-list .member {
+  MAIN .section#about-us .member-list .member {
     flex-wrap: wrap;
     justify-content: center;
   }
-  MAIN .section#gulfood .member-list .member .photo {
+  MAIN .section#about-us .member-list .member .photo {
     margin-bottom: 12px;
   }
-  MAIN .section#gulfood .member-list .member .info {
+  MAIN .section#about-us .member-list .member .info {
     text-align: center;
   }
 }
