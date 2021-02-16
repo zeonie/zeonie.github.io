@@ -298,12 +298,17 @@ HEADER .banner .info-wrap .official-link {
     color: #f3f3f3;
 }
 HEADER .banner .banner-logos {
-    padding: 56px 24px;
+    padding: 20px 24px 55px;
     background: #f3f3f3;
 }
 HEADER .banner .banner-logos IMG:first-child {
-    margin-bottom: 28px;
+    max-width: 75%;
+    margin: 28px auto;
 }
+HEADER .banner .banner-logos IMG:last-child {
+    margin-top: 28px
+}
+
 HEADER #nav {
     position: absolute;
     bottom: 0;
@@ -1281,20 +1286,9 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     }
     HEADER .banner .banner-logos {
         -webkit-box-flex: 1;
-        -ms-flex: 1 0 50%;
-        flex: 1 0 50%;
-        max-width: 50%;
-        -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-        order: 0;
-        margin: 0 auto 24px auto;
-        padding: 24px 12px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
+        -ms-flex: 1 0 100%;
+        flex: 1 0 100%;
+        max-width: 100%;
     }
     HEADER .banner .banner-logos IMG {
         -webkit-box-flex: 1;
@@ -1401,10 +1395,18 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     }
     HEADER .banner .banner-logos {
         -webkit-box-flex: 1;
-        -ms-flex: 1 0 280px;
-        flex: 1 0 280px;
-        max-width: 280px;
+        -ms-flex: 1 0 100%;
+        flex: 1 0 100%;
+        max-width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
     }
+    HEADER .banner .banner-logos IMG {
+        margin-bottom: 28px !important;
+    }
+
     HEADER .inner {
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -2261,6 +2263,24 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
         -ms-flex: 1 0 100%;
         flex: 1 0 100%;
         max-width: 100%;
+    }
+
+    HEADER .banner .banner-logos {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+
+    HEADER .banner .banner-logos IMG {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 30%  !important;
+        flex: 1 0 30%  !important;
+        max-width: 30%  !important;
+        margin-bottom: 0 !important;
+    }
+
+    HEADER .banner .banner-logos IMG {
+        margin-left: 30px;
     }
 }
 @media (max-width: 768px) {
