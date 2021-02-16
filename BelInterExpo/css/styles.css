@@ -379,7 +379,7 @@ MAIN .section#gulfood .about-card-video > IFRAME {
 MAIN .section#about-us .text-center,
 MAIN .section#gulfood .text-center {
   text-align: center;
-  margin-top: 105px;
+  /*margin-top: 105px;*/
 }
 MAIN .section#about-us .text-center > P,
 MAIN .section#gulfood .text-center > P {
