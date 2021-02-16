@@ -1809,17 +1809,17 @@ FOOTER .form-wrap FORM .form-group BUTTON:hover {
     align-items: center;
     color: #f3f3f3;
 }
-.companie HEADER .yr-link::before {
-    content: "";
-    display: block;
-    background-image: url("../images/icons/youtube.svg");
-    background-size: 100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 24px;
-    margin-right: 4px;
-}
+/*.companie HEADER .yr-link::before {*/
+/*    content: "";*/
+/*    display: block;*/
+/*    background-image: url("../images/icons/youtube.svg");*/
+/*    background-size: 100% 100%;*/
+/*    background-position: center center;*/
+/*    background-repeat: no-repeat;*/
+/*    width: 24px;*/
+/*    height: 24px;*/
+/*    margin-right: 4px;*/
+/*}*/
 
 .companie HEADER .place::before {
     content: "";
