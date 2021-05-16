@@ -18,6 +18,7 @@ BODY {
 }
 .section {
     padding: 82px 0 82px;
+    position: relative;
 }
 .section--dark {
     background-image: linear-gradient(0deg, #293343 0%, #2f3a4c 100%);
@@ -186,7 +187,8 @@ NAV {
 .about--videowrapper {
     border-radius: 35px;
     box-shadow: 0 9px 15px 0 rgba(0,0,0,0.35);
-    height: 100%;
+    width: 100%;
+    height: 60%;
     position: relative;
     overflow: hidden;
 }
@@ -252,24 +254,52 @@ NAV {
 .expo--cards {
     margin-top: 24px;
 }
-.expo--card {
+.expo--cards > DIV {
     margin-bottom: 24px;
+}
+.expo--card {
+
 }
 .expo--cardimage {
     border-radius: 35px;
     overflow: hidden;
     margin-bottom: 16px;
-    height: 256px;
-    max-height: 256px;
     position: relative;
     box-shadow: 0 9px 15px 0 rgba(0,0,0,0.35);
+    cursor: pointer;
+    height: 256px;
 }
 .expo--cardimage IMG {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
+    height: auto;
+}
+.expo--cardimage:hover .expo--cardtext{
+    opacity: 1;
+    visibility: visible;
+    transform: scale3d(1,1,1);
+}
+.expo--cardtext {
+    position: relative;
+    z-index: 1;
+    background: rgba(0,0,0,.7);
+    padding: 15px;
     height: 100%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale3d(0,1,0);
+    transition: all 0.3s ease-in-out;
+}
+.expo--cardtext P {
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
 }
 .expo--cardtitle P {
     font-size: 26px;
@@ -589,6 +619,10 @@ FOOTER * {
 }
 .empl-img IMG {
     border-radius: 20px;
+    max-width: 78px;
+}
+.empl-info {
+    flex: 1;
 }
 .empl-info P {
     font-size: 22px;
@@ -604,6 +638,121 @@ FOOTER * {
     font-size: 36px;
 }
 /*FOOTER*/
+/*MODAL*/
+#myModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */;
+}
+/*MODAL*/
+/* Modal Content */
+.modalContent {
+    height: 100%;
+    max-width: 1240px;
+    padding: 0 12px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.modalContentInner {
+    position: relative;
+    width: 100%;
+    border-radius: 40px;
+    padding: 38px 12px;
+    background: url(../images/background/1form.png), #fff;
+    background-repeat: no-repeat;
+}
+.modalBody {
+    max-width: 780px;
+    margin: 0 auto;
+}
+.modalHeader {
+    font-size: 52px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    color: #2f3a4c;
+    text-align: center;
+    margin: 0 0 32px 0;
+    font-weight: 600;
+}
+.modalSubtitle{
+    font-size: 30px;
+    line-height: 32px;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+}
+#contactform {
+    margin-top: 46px;
+}
+.form-group {
+    margin-bottom: 16px;
+}
+.form-group LABEL {
+    font-size: 22px;
+    line-height: 28px;
+    color: #000;
+    margin-bottom: 8px;
+}
+.form-group INPUT,.form-group TEXTAREA {
+    font-size: 22px;
+    line-height: 28px;
+}
+.form-group INPUT, .form-group TEXTAREA {
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: 2px solid #808080;
+}
+.form-group INPUT:focus, .form-group TEXTAREA:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #af8450;
+}
+.form-group.required > LABEL::after {
+    content: "*";
+    margin-left: 4px;
+}
+#contactform BUTTON {
+    background-image: linear-gradient(-80deg, #bb935b 0%, #956f3f 14%, #fdc584 66%, #956f3f 100%);
+    box-shadow: 0 9px 15px 0 rgba(0,0,0,0.35);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    border-radius: 20px;
+    border: 0;
+    font-size: 35px;
+    line-height: 57px;
+    text-align: center;
+    width: 320px;
+    max-width: 320px;
+    margin: 0 auto;
+    display: block;
+}
+#contactform BUTTON:hover {
+    box-shadow: 0 9px 10px 0 rgba(0,0,0,0.35);
+}
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    font-size: 44px;
+    color: #2f3a4c;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 @media (min-width: 576px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 100%;
@@ -656,6 +805,12 @@ FOOTER * {
         width: 467px;
     }
 }
+@media (max-width: 1519px){
+    .expo--cardtext P {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
 @media (max-width: 1400px) {
     .phone-wrap {
         display: none;
@@ -663,6 +818,10 @@ FOOTER * {
     .special-button A {
         font-size: 20px;
         line-height: 1.4em;
+    }
+    .section::before,
+    .section::after {
+        opacity: .5;
     }
 }
 @media (max-width: 1280px) {
@@ -758,6 +917,19 @@ FOOTER * {
     .offer--list LI {
         font-size: 20px;
     }
+    .empl-img {
+        margin-right: 12px;
+    }
+    .empl-info P {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+@media (max-width: 1200px) {
+    .expo--cardtext P {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 @media (max-width: 991px) {
     .section#banner H1 {
@@ -770,7 +942,7 @@ FOOTER * {
     .about--title {
         font-size: 28px;
     }
-    .about--card P {
+    .about--card P, .about--intro, .offer--text P {
         font-size: 22px;
         line-height: 1.2em;
     }
@@ -848,6 +1020,7 @@ FOOTER * {
 @media (max-width: 768px) {
     .about--videowrapper {
         height: 364px;
+        margin-top: 24px;
     }
     H3.section--title {
         font-size: 36px;
@@ -902,6 +1075,42 @@ FOOTER * {
     }
     .empl-wrap {
         padding: 12px;
+    }
+    .modalContentInner {
+        padding: 18px 12px;
+        border-radius: 15px;
+    }
+    .modalHeader {
+        font-size: 24px;
+        letter-spacing: 1px;
+        line-height: 1.3em;
+        margin: 0 0 16px 0;
+    }
+    .modalSubtitle {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    #contactform {
+        margin-top: 26px;
+    }
+    .form-group LABEL {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .form-group INPUT, .form-group TEXTAREA {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    #contactform BUTTON {
+        font-size: 20px;
+        line-height: 32px;
+        width: 270px;
+        max-width: 270px;
+    }
+    .close {
+        top: 5px;
+        right: 7px;
+        font-size: 32px;
     }
 }
 @media (max-width: 545px) {
@@ -980,3 +1189,74 @@ FOOTER * {
         width: 100%;
     }
 }
+
+/*BACKGROUNDS*/
+    #about::after {
+        content: "";
+        position: absolute;
+        width: 660px;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        background-image: url(../images/background/1_1.png);
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+    }
+    #expo::before {
+        content: "";
+        position: absolute;
+        width: 660px;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        background-image: url(../images/background/1_2.png);
+        background-position-y: top;
+        background-repeat: no-repeat;
+    }
+    #expo::after {
+        content: "";
+        position: absolute;
+        width: 680px;
+        height: 100%;
+        max-width: 100%;
+        bottom: 0;
+        left: 0;
+        background-image: url(../images/background/2_1.png);
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+    }
+    #offer::before {
+        content: "";
+        position: absolute;
+        width: 680px;
+        max-width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background-image: url(../images/background/2_2.png);
+        background-position-y: top;
+        background-repeat: no-repeat;
+    }
+    #offer::after {
+        content: "";
+        position: absolute;
+        width: 616px;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        background-image: url(../images/background/3_1.png);
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+    }
+    #vacation::before {
+        content: "";
+        position: absolute;
+        width: 616px;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        background-image: url(../images/background/3_2.png);
+        background-position-y: top;
+        background-repeat: no-repeat;
+    }
+/*BACKGROUNDS*/
